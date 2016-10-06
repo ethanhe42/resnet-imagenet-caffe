@@ -12,7 +12,8 @@ layer {
     crop_size: 224
     mean_value: 104.0
     mean_value: 117.0
-    mean_value: 123.0
+    mean_value: 123.0    
+    #mean_file: "/home/heyihui/resnet-imagenet-caffe/resnet_50/ResNet_mean.binaryproto"
   }
   data_param {
     source: "/home/heyihui/heyihui-local/caffe/examples/imagenet/ilsvrc12_train_lmdb"
@@ -34,6 +35,7 @@ layer {
     mean_value: 104.0
     mean_value: 117.0
     mean_value: 123.0
+    #mean_file: "/home/heyihui/resnet-imagenet-caffe/resnet_50/ResNet_mean.binaryproto"
   }
   data_param {
     source: "/home/heyihui/heyihui-local/caffe/examples/imagenet/ilsvrc12_val_lmdb"
@@ -41,6 +43,7 @@ layer {
     backend: LMDB
   }
 }
+
 layer {
 	bottom: "data"
 	top: "conv1"
@@ -51,13 +54,6 @@ layer {
 		kernel_size: 7
 		pad: 3
 		stride: 2
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -67,7 +63,7 @@ layer {
 	name: "bn_conv1"
 	type: "BatchNorm"
 	batch_norm_param {
-
+		use_global_stats: true
 	}
 }
 
@@ -111,13 +107,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -127,7 +116,7 @@ layer {
 	name: "bn2a_branch1"
 	type: "BatchNorm"
 	batch_norm_param {
-
+		use_global_stats: true
 	}
 }
 
@@ -152,13 +141,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -168,7 +150,7 @@ layer {
 	name: "bn2a_branch2a"
 	type: "BatchNorm"
 	batch_norm_param {
-
+		use_global_stats: true
 	}
 }
 
@@ -200,13 +182,6 @@ layer {
 		pad: 1
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -216,7 +191,7 @@ layer {
 	name: "bn2a_branch2b"
 	type: "BatchNorm"
 	batch_norm_param {
-
+		use_global_stats: true
 	}
 }
 
@@ -248,13 +223,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -264,7 +232,7 @@ layer {
 	name: "bn2a_branch2c"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -304,13 +272,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -320,7 +281,7 @@ layer {
 	name: "bn2b_branch2a"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -352,13 +313,6 @@ layer {
 		pad: 1
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -368,7 +322,7 @@ layer {
 	name: "bn2b_branch2b"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -400,13 +354,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -416,7 +363,7 @@ layer {
 	name: "bn2b_branch2c"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -456,13 +403,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -472,7 +412,7 @@ layer {
 	name: "bn2c_branch2a"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -504,13 +444,6 @@ layer {
 		pad: 1
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -520,7 +453,7 @@ layer {
 	name: "bn2c_branch2b"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -552,13 +485,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -568,7 +494,7 @@ layer {
 	name: "bn2c_branch2c"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -608,13 +534,6 @@ layer {
 		pad: 0
 		stride: 2
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -624,7 +543,7 @@ layer {
 	name: "bn3a_branch1"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -649,13 +568,6 @@ layer {
 		pad: 0
 		stride: 2
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -665,7 +577,7 @@ layer {
 	name: "bn3a_branch2a"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -697,13 +609,6 @@ layer {
 		pad: 1
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -713,7 +618,7 @@ layer {
 	name: "bn3a_branch2b"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -745,13 +650,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -761,7 +659,7 @@ layer {
 	name: "bn3a_branch2c"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -801,13 +699,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -817,7 +708,7 @@ layer {
 	name: "bn3b_branch2a"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -849,13 +740,6 @@ layer {
 		pad: 1
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -865,7 +749,7 @@ layer {
 	name: "bn3b_branch2b"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -897,13 +781,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -913,7 +790,7 @@ layer {
 	name: "bn3b_branch2c"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -953,13 +830,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -969,7 +839,7 @@ layer {
 	name: "bn3c_branch2a"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -1001,13 +871,6 @@ layer {
 		pad: 1
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -1017,7 +880,7 @@ layer {
 	name: "bn3c_branch2b"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -1049,13 +912,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -1065,7 +921,7 @@ layer {
 	name: "bn3c_branch2c"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -1105,13 +961,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -1121,7 +970,7 @@ layer {
 	name: "bn3d_branch2a"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -1153,13 +1002,6 @@ layer {
 		pad: 1
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -1169,7 +1011,7 @@ layer {
 	name: "bn3d_branch2b"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -1201,13 +1043,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -1217,7 +1052,7 @@ layer {
 	name: "bn3d_branch2c"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -1257,13 +1092,6 @@ layer {
 		pad: 0
 		stride: 2
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -1273,7 +1101,7 @@ layer {
 	name: "bn4a_branch1"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -1298,13 +1126,6 @@ layer {
 		pad: 0
 		stride: 2
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -1314,7 +1135,7 @@ layer {
 	name: "bn4a_branch2a"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -1346,13 +1167,6 @@ layer {
 		pad: 1
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -1362,7 +1176,7 @@ layer {
 	name: "bn4a_branch2b"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -1394,13 +1208,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -1410,7 +1217,7 @@ layer {
 	name: "bn4a_branch2c"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -1450,13 +1257,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -1466,7 +1266,7 @@ layer {
 	name: "bn4b_branch2a"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -1498,13 +1298,6 @@ layer {
 		pad: 1
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -1514,7 +1307,7 @@ layer {
 	name: "bn4b_branch2b"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -1546,13 +1339,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -1562,7 +1348,7 @@ layer {
 	name: "bn4b_branch2c"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -1602,13 +1388,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -1618,7 +1397,7 @@ layer {
 	name: "bn4c_branch2a"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -1650,13 +1429,6 @@ layer {
 		pad: 1
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -1666,7 +1438,7 @@ layer {
 	name: "bn4c_branch2b"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -1698,13 +1470,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -1714,7 +1479,7 @@ layer {
 	name: "bn4c_branch2c"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -1754,13 +1519,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -1770,7 +1528,7 @@ layer {
 	name: "bn4d_branch2a"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -1802,13 +1560,6 @@ layer {
 		pad: 1
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -1818,7 +1569,7 @@ layer {
 	name: "bn4d_branch2b"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -1850,13 +1601,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -1866,7 +1610,7 @@ layer {
 	name: "bn4d_branch2c"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -1906,13 +1650,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -1922,7 +1659,7 @@ layer {
 	name: "bn4e_branch2a"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -1954,13 +1691,6 @@ layer {
 		pad: 1
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -1970,7 +1700,7 @@ layer {
 	name: "bn4e_branch2b"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -2002,13 +1732,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -2018,7 +1741,7 @@ layer {
 	name: "bn4e_branch2c"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -2058,13 +1781,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -2074,7 +1790,7 @@ layer {
 	name: "bn4f_branch2a"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -2106,13 +1822,6 @@ layer {
 		pad: 1
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -2122,7 +1831,7 @@ layer {
 	name: "bn4f_branch2b"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -2154,13 +1863,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -2170,7 +1872,7 @@ layer {
 	name: "bn4f_branch2c"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -2210,13 +1912,6 @@ layer {
 		pad: 0
 		stride: 2
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -2226,7 +1921,7 @@ layer {
 	name: "bn5a_branch1"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -2251,13 +1946,6 @@ layer {
 		pad: 0
 		stride: 2
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -2267,7 +1955,7 @@ layer {
 	name: "bn5a_branch2a"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -2299,13 +1987,6 @@ layer {
 		pad: 1
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -2315,7 +1996,7 @@ layer {
 	name: "bn5a_branch2b"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -2347,13 +2028,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -2363,7 +2037,7 @@ layer {
 	name: "bn5a_branch2c"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -2403,13 +2077,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -2419,7 +2086,7 @@ layer {
 	name: "bn5b_branch2a"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -2451,13 +2118,6 @@ layer {
 		pad: 1
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -2467,7 +2127,7 @@ layer {
 	name: "bn5b_branch2b"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -2499,13 +2159,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -2515,7 +2168,7 @@ layer {
 	name: "bn5b_branch2c"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -2555,13 +2208,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -2571,7 +2217,7 @@ layer {
 	name: "bn5c_branch2a"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -2603,13 +2249,6 @@ layer {
 		pad: 1
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -2619,7 +2258,7 @@ layer {
 	name: "bn5c_branch2b"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -2651,13 +2290,6 @@ layer {
 		pad: 0
 		stride: 1
 		bias_term: false
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0.2
-    	       }
 	}
 }
 
@@ -2667,7 +2299,7 @@ layer {
 	name: "bn5c_branch2c"
 	type: "BatchNorm"
 	batch_norm_param {
-		
+		use_global_stats: true
 	}
 }
 
@@ -2715,28 +2347,18 @@ layer {
 	type: "InnerProduct"
 	inner_product_param {
 		num_output: 1000
-		weight_filler {
-      		  type: "xavier"
-    		}
-    		bias_filler {
-      		  type: "constant"
-      		  value: 0
-    	        }
 	}
 }
 
 layer {
 	bottom: "fc1000"
-	bottom: "label"
 	top: "prob"
 	name: "prob"
-	type: "SoftmaxWithLoss"
-	include {
-	  phase: TRAIN
-	}
+	type: "Softmax"
 }
+
 layer {
-  bottom: "fc1000"
+  bottom: "prob"
   bottom: "label"
   top: "accuracy@1"
   name: "accuracy/top1"
@@ -2746,7 +2368,7 @@ layer {
   }
 }
 layer {
-  bottom: "fc1000"
+  bottom: "prob"
   bottom: "label"
   top: "accuracy@5"
   name: "accuracy/top5"

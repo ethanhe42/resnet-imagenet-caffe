@@ -2,7 +2,7 @@ set -x
 
 GPUs=$1
 NET=$2
-# EXTRA_ARGS=${array[@]:3:$len}
+EXTRA_ARGS=${array[@]:3:$len}
 # EXTRA_ARGS_SLUG=${EXTRA_ARGS// /_}
 EXTRA_ARGS_SLUG=$3
 
@@ -13,8 +13,8 @@ echo Logging output to "$LOG"
 
 time /home/heyihui/heyihui-local/caffe/build/tools/caffe train -gpu ${GPUs} \
     -solver ${solver} \
-    -sighup_effect stop
-#    ${EXTRA_ARGS}
+    -sighup_effect stop \
+    ${EXTRA_ARGS}
 
 set +x
 

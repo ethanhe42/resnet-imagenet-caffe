@@ -32,10 +32,11 @@ layer {
   }
   transform_param {
     crop_size: 224
-    mean_value: 104.0
-    mean_value: 117.0
-    mean_value: 123.0
+    # mean_value: 104.0
+    # mean_value: 117.0
+    # mean_value: 123.0
     #mean_file: "/home/heyihui/resnet-imagenet-caffe/resnet_50/ResNet_mean.binaryproto"
+    mean_file: "/home/heyihui/heyihui-local/caffe/data/ilsvrc12/imagenet_mean.binaryproto"
   }
   data_param {
     source: "/home/heyihui/heyihui-local/caffe/examples/imagenet/ilsvrc12_val_lmdb"
@@ -2334,10 +2335,10 @@ layer {
 	name: "pool5"
 	type: "Pooling"
 	pooling_param {
-		kernel_size: 7
-		stride: 1
+        global_pooling: true
 		pool: AVE
 	}
+
 }
 
 layer {

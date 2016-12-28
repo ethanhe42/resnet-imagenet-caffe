@@ -4,39 +4,16 @@ layer {
   type: "Data"
   top: "data"
   top: "label"
-  include {
-    phase: TRAIN
-  }
   transform_param {
-    mirror: true
+    mirror: false
     crop_size: 224
-    mean_value: 104.0
-    mean_value: 117.0
-    mean_value: 123.0
-  }
-  data_param {
-    source: "/home/heyihui/heyihui-local/caffe/examples/imagenet/ilsvrc12_train_lmdb"
-    batch_size: 8
-    backend: LMDB
-  }
-}
-layer {
-  name: "data"
-  type: "Data"
-  top: "data"
-  top: "label"
-  include {
-    phase: TEST
-  }
-  transform_param {
     mean_value: 104.0
     mean_value: 117.0
     mean_value: 123.0
   }
   data_param {
     source: "/home/heyihui/heyihui-local/caffe/examples/imagenet/ilsvrc12_val_lmdb"
-    batch_size: 8
-    crop_size: 224
+    batch_size: 32
     backend: LMDB
   }
 }
@@ -56,12 +33,12 @@ layer {
   name: "conv1_relu"
   type: "ReLU"
   bottom: "conv1"
-  top: "conv1_relu"
+  top: "conv1"
 }
 layer {
   name: "pool1"
   type: "Pooling"
-  bottom: "conv1_relu"
+  bottom: "conv1"
   top: "pool1"
   pooling_param {
     pool: MAX
@@ -88,7 +65,7 @@ layer {
   bottom: "pool1"
   top: "res2a_branch2a"
   convolution_param {
-    num_output: 64
+    num_output: 32
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -99,15 +76,15 @@ layer {
   name: "res2a_branch2a_relu"
   type: "ReLU"
   bottom: "res2a_branch2a"
-  top: "res2a_branch2a_relu"
+  top: "res2a_branch2a"
 }
 layer {
   name: "res2a_branch2b"
   type: "Convolution"
-  bottom: "res2a_branch2a_relu"
+  bottom: "res2a_branch2a"
   top: "res2a_branch2b"
   convolution_param {
-    num_output: 64
+    num_output: 35
     bias_term: true
     pad: 1
     kernel_size: 3
@@ -118,12 +95,12 @@ layer {
   name: "res2a_branch2b_relu"
   type: "ReLU"
   bottom: "res2a_branch2b"
-  top: "res2a_branch2b_relu"
+  top: "res2a_branch2b"
 }
 layer {
   name: "res2a_branch2c"
   type: "Convolution"
-  bottom: "res2a_branch2b_relu"
+  bottom: "res2a_branch2b"
   top: "res2a_branch2c"
   convolution_param {
     num_output: 256
@@ -152,7 +129,7 @@ layer {
   bottom: "res2a"
   top: "res2b_branch2a"
   convolution_param {
-    num_output: 64
+    num_output: 37
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -163,15 +140,15 @@ layer {
   name: "res2b_branch2a_relu"
   type: "ReLU"
   bottom: "res2b_branch2a"
-  top: "res2b_branch2a_relu"
+  top: "res2b_branch2a"
 }
 layer {
   name: "res2b_branch2b"
   type: "Convolution"
-  bottom: "res2b_branch2a_relu"
+  bottom: "res2b_branch2a"
   top: "res2b_branch2b"
   convolution_param {
-    num_output: 64
+    num_output: 36
     bias_term: true
     pad: 1
     kernel_size: 3
@@ -182,12 +159,12 @@ layer {
   name: "res2b_branch2b_relu"
   type: "ReLU"
   bottom: "res2b_branch2b"
-  top: "res2b_branch2b_relu"
+  top: "res2b_branch2b"
 }
 layer {
   name: "res2b_branch2c"
   type: "Convolution"
-  bottom: "res2b_branch2b_relu"
+  bottom: "res2b_branch2b"
   top: "res2b_branch2c"
   convolution_param {
     num_output: 256
@@ -216,7 +193,7 @@ layer {
   bottom: "res2b"
   top: "res2c_branch2a"
   convolution_param {
-    num_output: 64
+    num_output: 36
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -227,15 +204,15 @@ layer {
   name: "res2c_branch2a_relu"
   type: "ReLU"
   bottom: "res2c_branch2a"
-  top: "res2c_branch2a_relu"
+  top: "res2c_branch2a"
 }
 layer {
   name: "res2c_branch2b"
   type: "Convolution"
-  bottom: "res2c_branch2a_relu"
+  bottom: "res2c_branch2a"
   top: "res2c_branch2b"
   convolution_param {
-    num_output: 64
+    num_output: 33
     bias_term: true
     pad: 1
     kernel_size: 3
@@ -246,12 +223,12 @@ layer {
   name: "res2c_branch2b_relu"
   type: "ReLU"
   bottom: "res2c_branch2b"
-  top: "res2c_branch2b_relu"
+  top: "res2c_branch2b"
 }
 layer {
   name: "res2c_branch2c"
   type: "Convolution"
-  bottom: "res2c_branch2b_relu"
+  bottom: "res2c_branch2b"
   top: "res2c_branch2c"
   convolution_param {
     num_output: 256
@@ -293,7 +270,7 @@ layer {
   bottom: "res2c"
   top: "res3a_branch2a"
   convolution_param {
-    num_output: 128
+    num_output: 71
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -304,15 +281,15 @@ layer {
   name: "res3a_branch2a_relu"
   type: "ReLU"
   bottom: "res3a_branch2a"
-  top: "res3a_branch2a_relu"
+  top: "res3a_branch2a"
 }
 layer {
   name: "res3a_branch2b"
   type: "Convolution"
-  bottom: "res3a_branch2a_relu"
+  bottom: "res3a_branch2a"
   top: "res3a_branch2b"
   convolution_param {
-    num_output: 128
+    num_output: 70
     bias_term: true
     pad: 1
     kernel_size: 3
@@ -323,12 +300,12 @@ layer {
   name: "res3a_branch2b_relu"
   type: "ReLU"
   bottom: "res3a_branch2b"
-  top: "res3a_branch2b_relu"
+  top: "res3a_branch2b"
 }
 layer {
   name: "res3a_branch2c"
   type: "Convolution"
-  bottom: "res3a_branch2b_relu"
+  bottom: "res3a_branch2b"
   top: "res3a_branch2c"
   convolution_param {
     num_output: 512
@@ -357,7 +334,7 @@ layer {
   bottom: "res3a"
   top: "res3b_branch2a"
   convolution_param {
-    num_output: 128
+    num_output: 73
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -368,15 +345,15 @@ layer {
   name: "res3b_branch2a_relu"
   type: "ReLU"
   bottom: "res3b_branch2a"
-  top: "res3b_branch2a_relu"
+  top: "res3b_branch2a"
 }
 layer {
   name: "res3b_branch2b"
   type: "Convolution"
-  bottom: "res3b_branch2a_relu"
+  bottom: "res3b_branch2a"
   top: "res3b_branch2b"
   convolution_param {
-    num_output: 128
+    num_output: 67
     bias_term: true
     pad: 1
     kernel_size: 3
@@ -387,12 +364,12 @@ layer {
   name: "res3b_branch2b_relu"
   type: "ReLU"
   bottom: "res3b_branch2b"
-  top: "res3b_branch2b_relu"
+  top: "res3b_branch2b"
 }
 layer {
   name: "res3b_branch2c"
   type: "Convolution"
-  bottom: "res3b_branch2b_relu"
+  bottom: "res3b_branch2b"
   top: "res3b_branch2c"
   convolution_param {
     num_output: 512
@@ -421,7 +398,7 @@ layer {
   bottom: "res3b"
   top: "res3c_branch2a"
   convolution_param {
-    num_output: 128
+    num_output: 74
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -432,15 +409,15 @@ layer {
   name: "res3c_branch2a_relu"
   type: "ReLU"
   bottom: "res3c_branch2a"
-  top: "res3c_branch2a_relu"
+  top: "res3c_branch2a"
 }
 layer {
   name: "res3c_branch2b"
   type: "Convolution"
-  bottom: "res3c_branch2a_relu"
+  bottom: "res3c_branch2a"
   top: "res3c_branch2b"
   convolution_param {
-    num_output: 128
+    num_output: 73
     bias_term: true
     pad: 1
     kernel_size: 3
@@ -451,12 +428,12 @@ layer {
   name: "res3c_branch2b_relu"
   type: "ReLU"
   bottom: "res3c_branch2b"
-  top: "res3c_branch2b_relu"
+  top: "res3c_branch2b"
 }
 layer {
   name: "res3c_branch2c"
   type: "Convolution"
-  bottom: "res3c_branch2b_relu"
+  bottom: "res3c_branch2b"
   top: "res3c_branch2c"
   convolution_param {
     num_output: 512
@@ -485,7 +462,7 @@ layer {
   bottom: "res3c"
   top: "res3d_branch2a"
   convolution_param {
-    num_output: 128
+    num_output: 66
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -496,15 +473,15 @@ layer {
   name: "res3d_branch2a_relu"
   type: "ReLU"
   bottom: "res3d_branch2a"
-  top: "res3d_branch2a_relu"
+  top: "res3d_branch2a"
 }
 layer {
   name: "res3d_branch2b"
   type: "Convolution"
-  bottom: "res3d_branch2a_relu"
+  bottom: "res3d_branch2a"
   top: "res3d_branch2b"
   convolution_param {
-    num_output: 128
+    num_output: 67
     bias_term: true
     pad: 1
     kernel_size: 3
@@ -515,12 +492,12 @@ layer {
   name: "res3d_branch2b_relu"
   type: "ReLU"
   bottom: "res3d_branch2b"
-  top: "res3d_branch2b_relu"
+  top: "res3d_branch2b"
 }
 layer {
   name: "res3d_branch2c"
   type: "Convolution"
-  bottom: "res3d_branch2b_relu"
+  bottom: "res3d_branch2b"
   top: "res3d_branch2c"
   convolution_param {
     num_output: 512
@@ -562,7 +539,7 @@ layer {
   bottom: "res3d"
   top: "res4a_branch2a"
   convolution_param {
-    num_output: 256
+    num_output: 132
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -573,15 +550,15 @@ layer {
   name: "res4a_branch2a_relu"
   type: "ReLU"
   bottom: "res4a_branch2a"
-  top: "res4a_branch2a_relu"
+  top: "res4a_branch2a"
 }
 layer {
   name: "res4a_branch2b"
   type: "Convolution"
-  bottom: "res4a_branch2a_relu"
+  bottom: "res4a_branch2a"
   top: "res4a_branch2b"
   convolution_param {
-    num_output: 256
+    num_output: 129
     bias_term: true
     pad: 1
     kernel_size: 3
@@ -592,12 +569,12 @@ layer {
   name: "res4a_branch2b_relu"
   type: "ReLU"
   bottom: "res4a_branch2b"
-  top: "res4a_branch2b_relu"
+  top: "res4a_branch2b"
 }
 layer {
   name: "res4a_branch2c"
   type: "Convolution"
-  bottom: "res4a_branch2b_relu"
+  bottom: "res4a_branch2b"
   top: "res4a_branch2c"
   convolution_param {
     num_output: 1024
@@ -626,7 +603,7 @@ layer {
   bottom: "res4a"
   top: "res4b_branch2a"
   convolution_param {
-    num_output: 256
+    num_output: 143
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -637,15 +614,15 @@ layer {
   name: "res4b_branch2a_relu"
   type: "ReLU"
   bottom: "res4b_branch2a"
-  top: "res4b_branch2a_relu"
+  top: "res4b_branch2a"
 }
 layer {
   name: "res4b_branch2b"
   type: "Convolution"
-  bottom: "res4b_branch2a_relu"
+  bottom: "res4b_branch2a"
   top: "res4b_branch2b"
   convolution_param {
-    num_output: 256
+    num_output: 140
     bias_term: true
     pad: 1
     kernel_size: 3
@@ -656,12 +633,12 @@ layer {
   name: "res4b_branch2b_relu"
   type: "ReLU"
   bottom: "res4b_branch2b"
-  top: "res4b_branch2b_relu"
+  top: "res4b_branch2b"
 }
 layer {
   name: "res4b_branch2c"
   type: "Convolution"
-  bottom: "res4b_branch2b_relu"
+  bottom: "res4b_branch2b"
   top: "res4b_branch2c"
   convolution_param {
     num_output: 1024
@@ -690,7 +667,7 @@ layer {
   bottom: "res4b"
   top: "res4c_branch2a"
   convolution_param {
-    num_output: 256
+    num_output: 139
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -701,15 +678,15 @@ layer {
   name: "res4c_branch2a_relu"
   type: "ReLU"
   bottom: "res4c_branch2a"
-  top: "res4c_branch2a_relu"
+  top: "res4c_branch2a"
 }
 layer {
   name: "res4c_branch2b"
   type: "Convolution"
-  bottom: "res4c_branch2a_relu"
+  bottom: "res4c_branch2a"
   top: "res4c_branch2b"
   convolution_param {
-    num_output: 256
+    num_output: 150
     bias_term: true
     pad: 1
     kernel_size: 3
@@ -720,12 +697,12 @@ layer {
   name: "res4c_branch2b_relu"
   type: "ReLU"
   bottom: "res4c_branch2b"
-  top: "res4c_branch2b_relu"
+  top: "res4c_branch2b"
 }
 layer {
   name: "res4c_branch2c"
   type: "Convolution"
-  bottom: "res4c_branch2b_relu"
+  bottom: "res4c_branch2b"
   top: "res4c_branch2c"
   convolution_param {
     num_output: 1024
@@ -754,7 +731,7 @@ layer {
   bottom: "res4c"
   top: "res4d_branch2a"
   convolution_param {
-    num_output: 256
+    num_output: 129
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -765,15 +742,15 @@ layer {
   name: "res4d_branch2a_relu"
   type: "ReLU"
   bottom: "res4d_branch2a"
-  top: "res4d_branch2a_relu"
+  top: "res4d_branch2a"
 }
 layer {
   name: "res4d_branch2b"
   type: "Convolution"
-  bottom: "res4d_branch2a_relu"
+  bottom: "res4d_branch2a"
   top: "res4d_branch2b"
   convolution_param {
-    num_output: 256
+    num_output: 142
     bias_term: true
     pad: 1
     kernel_size: 3
@@ -784,12 +761,12 @@ layer {
   name: "res4d_branch2b_relu"
   type: "ReLU"
   bottom: "res4d_branch2b"
-  top: "res4d_branch2b_relu"
+  top: "res4d_branch2b"
 }
 layer {
   name: "res4d_branch2c"
   type: "Convolution"
-  bottom: "res4d_branch2b_relu"
+  bottom: "res4d_branch2b"
   top: "res4d_branch2c"
   convolution_param {
     num_output: 1024
@@ -818,7 +795,7 @@ layer {
   bottom: "res4d"
   top: "res4e_branch2a"
   convolution_param {
-    num_output: 256
+    num_output: 146
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -829,12 +806,12 @@ layer {
   name: "res4e_branch2a_relu"
   type: "ReLU"
   bottom: "res4e_branch2a"
-  top: "res4e_branch2a_relu"
+  top: "res4e_branch2a"
 }
 layer {
   name: "res4e_branch2b"
   type: "Convolution"
-  bottom: "res4e_branch2a_relu"
+  bottom: "res4e_branch2a"
   top: "res4e_branch2b"
   convolution_param {
     num_output: 256
@@ -848,12 +825,12 @@ layer {
   name: "res4e_branch2b_relu"
   type: "ReLU"
   bottom: "res4e_branch2b"
-  top: "res4e_branch2b_relu"
+  top: "res4e_branch2b"
 }
 layer {
   name: "res4e_branch2c"
   type: "Convolution"
-  bottom: "res4e_branch2b_relu"
+  bottom: "res4e_branch2b"
   top: "res4e_branch2c"
   convolution_param {
     num_output: 1024
@@ -893,12 +870,12 @@ layer {
   name: "res4f_branch2a_relu"
   type: "ReLU"
   bottom: "res4f_branch2a"
-  top: "res4f_branch2a_relu"
+  top: "res4f_branch2a"
 }
 layer {
   name: "res4f_branch2b"
   type: "Convolution"
-  bottom: "res4f_branch2a_relu"
+  bottom: "res4f_branch2a"
   top: "res4f_branch2b"
   convolution_param {
     num_output: 256
@@ -912,12 +889,12 @@ layer {
   name: "res4f_branch2b_relu"
   type: "ReLU"
   bottom: "res4f_branch2b"
-  top: "res4f_branch2b_relu"
+  top: "res4f_branch2b"
 }
 layer {
   name: "res4f_branch2c"
   type: "Convolution"
-  bottom: "res4f_branch2b_relu"
+  bottom: "res4f_branch2b"
   top: "res4f_branch2c"
   convolution_param {
     num_output: 1024
@@ -970,12 +947,12 @@ layer {
   name: "res5a_branch2a_relu"
   type: "ReLU"
   bottom: "res5a_branch2a"
-  top: "res5a_branch2a_relu"
+  top: "res5a_branch2a"
 }
 layer {
   name: "res5a_branch2b"
   type: "Convolution"
-  bottom: "res5a_branch2a_relu"
+  bottom: "res5a_branch2a"
   top: "res5a_branch2b"
   convolution_param {
     num_output: 512
@@ -989,12 +966,12 @@ layer {
   name: "res5a_branch2b_relu"
   type: "ReLU"
   bottom: "res5a_branch2b"
-  top: "res5a_branch2b_relu"
+  top: "res5a_branch2b"
 }
 layer {
   name: "res5a_branch2c"
   type: "Convolution"
-  bottom: "res5a_branch2b_relu"
+  bottom: "res5a_branch2b"
   top: "res5a_branch2c"
   convolution_param {
     num_output: 2048
@@ -1034,12 +1011,12 @@ layer {
   name: "res5b_branch2a_relu"
   type: "ReLU"
   bottom: "res5b_branch2a"
-  top: "res5b_branch2a_relu"
+  top: "res5b_branch2a"
 }
 layer {
   name: "res5b_branch2b"
   type: "Convolution"
-  bottom: "res5b_branch2a_relu"
+  bottom: "res5b_branch2a"
   top: "res5b_branch2b"
   convolution_param {
     num_output: 512
@@ -1053,12 +1030,12 @@ layer {
   name: "res5b_branch2b_relu"
   type: "ReLU"
   bottom: "res5b_branch2b"
-  top: "res5b_branch2b_relu"
+  top: "res5b_branch2b"
 }
 layer {
   name: "res5b_branch2c"
   type: "Convolution"
-  bottom: "res5b_branch2b_relu"
+  bottom: "res5b_branch2b"
   top: "res5b_branch2c"
   convolution_param {
     num_output: 2048
@@ -1098,12 +1075,12 @@ layer {
   name: "res5c_branch2a_relu"
   type: "ReLU"
   bottom: "res5c_branch2a"
-  top: "res5c_branch2a_relu"
+  top: "res5c_branch2a"
 }
 layer {
   name: "res5c_branch2b"
   type: "Convolution"
-  bottom: "res5c_branch2a_relu"
+  bottom: "res5c_branch2a"
   top: "res5c_branch2b"
   convolution_param {
     num_output: 512
@@ -1117,12 +1094,12 @@ layer {
   name: "res5c_branch2b_relu"
   type: "ReLU"
   bottom: "res5c_branch2b"
-  top: "res5c_branch2b_relu"
+  top: "res5c_branch2b"
 }
 layer {
   name: "res5c_branch2c"
   type: "Convolution"
-  bottom: "res5c_branch2b_relu"
+  bottom: "res5c_branch2b"
   top: "res5c_branch2c"
   convolution_param {
     num_output: 2048

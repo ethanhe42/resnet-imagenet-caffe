@@ -5,10 +5,10 @@ layer {
   top: "data"
   top: "label"
   memory_data_param {
-    batch_size: 32
+    batch_size: 8
     channels: 3
-    height: 224
-    width: 224
+    height: 256
+    width: 256
   }
 }
 layer {
@@ -115,39 +115,12 @@ layer {
   name: "res2a_relu"
   type: "ReLU"
   bottom: "res2a"
-  top: "res2a_relu"
-}
-layer {
-  name: "res2a_id"
-  type: "Convolution"
-  bottom: "res2a_relu"
-  top: "res2a_id"
-  param {
-    lr_mult: 1.0
-    decay_mult: 1.0
-  }
-  param {
-    lr_mult: 1.0
-    decay_mult: 2.0
-  }
-  convolution_param {
-    num_output: 256
-    pad: 0
-    kernel_size: 1
-    stride: 1
-    weight_filler {
-      type: "msra"
-    }
-    bias_filler {
-      type: "constant"
-      value: 0.0
-    }
-  }
+  top: "res2a"
 }
 layer {
   name: "res2b_branch2a"
   type: "Convolution"
-  bottom: "res2a_relu"
+  bottom: "res2a"
   top: "res2b_branch2a"
   convolution_param {
     num_output: 64
@@ -198,47 +171,20 @@ layer {
 layer {
   name: "res2b"
   type: "Eltwise"
+  bottom: "res2a"
   bottom: "res2b_branch2c"
-  bottom: "res2a_id"
   top: "res2b"
 }
 layer {
   name: "res2b_relu"
   type: "ReLU"
   bottom: "res2b"
-  top: "res2b_relu"
-}
-layer {
-  name: "res2b_id"
-  type: "Convolution"
-  bottom: "res2b_relu"
-  top: "res2b_id"
-  param {
-    lr_mult: 1.0
-    decay_mult: 1.0
-  }
-  param {
-    lr_mult: 1.0
-    decay_mult: 2.0
-  }
-  convolution_param {
-    num_output: 256
-    pad: 0
-    kernel_size: 1
-    stride: 1
-    weight_filler {
-      type: "msra"
-    }
-    bias_filler {
-      type: "constant"
-      value: 0.0
-    }
-  }
+  top: "res2b"
 }
 layer {
   name: "res2c_branch2a"
   type: "Convolution"
-  bottom: "res2b_relu"
+  bottom: "res2b"
   top: "res2c_branch2a"
   convolution_param {
     num_output: 64
@@ -289,20 +235,20 @@ layer {
 layer {
   name: "res2c"
   type: "Eltwise"
+  bottom: "res2b"
   bottom: "res2c_branch2c"
-  bottom: "res2b_id"
   top: "res2c"
 }
 layer {
   name: "res2c_relu"
   type: "ReLU"
   bottom: "res2c"
-  top: "res2c_relu"
+  top: "res2c"
 }
 layer {
   name: "res3a_branch1"
   type: "Convolution"
-  bottom: "res2c_relu"
+  bottom: "res2c"
   top: "res3a_branch1"
   convolution_param {
     num_output: 512
@@ -315,7 +261,7 @@ layer {
 layer {
   name: "res3a_branch2a"
   type: "Convolution"
-  bottom: "res2c_relu"
+  bottom: "res2c"
   top: "res3a_branch2a"
   convolution_param {
     num_output: 128
@@ -374,39 +320,12 @@ layer {
   name: "res3a_relu"
   type: "ReLU"
   bottom: "res3a"
-  top: "res3a_relu"
-}
-layer {
-  name: "res3a_id"
-  type: "Convolution"
-  bottom: "res3a_relu"
-  top: "res3a_id"
-  param {
-    lr_mult: 1.0
-    decay_mult: 1.0
-  }
-  param {
-    lr_mult: 1.0
-    decay_mult: 2.0
-  }
-  convolution_param {
-    num_output: 512
-    pad: 0
-    kernel_size: 1
-    stride: 1
-    weight_filler {
-      type: "msra"
-    }
-    bias_filler {
-      type: "constant"
-      value: 0.0
-    }
-  }
+  top: "res3a"
 }
 layer {
   name: "res3b_branch2a"
   type: "Convolution"
-  bottom: "res3a_relu"
+  bottom: "res3a"
   top: "res3b_branch2a"
   convolution_param {
     num_output: 128
@@ -457,47 +376,20 @@ layer {
 layer {
   name: "res3b"
   type: "Eltwise"
+  bottom: "res3a"
   bottom: "res3b_branch2c"
-  bottom: "res3a_id"
   top: "res3b"
 }
 layer {
   name: "res3b_relu"
   type: "ReLU"
   bottom: "res3b"
-  top: "res3b_relu"
-}
-layer {
-  name: "res3b_id"
-  type: "Convolution"
-  bottom: "res3b_relu"
-  top: "res3b_id"
-  param {
-    lr_mult: 1.0
-    decay_mult: 1.0
-  }
-  param {
-    lr_mult: 1.0
-    decay_mult: 2.0
-  }
-  convolution_param {
-    num_output: 512
-    pad: 0
-    kernel_size: 1
-    stride: 1
-    weight_filler {
-      type: "msra"
-    }
-    bias_filler {
-      type: "constant"
-      value: 0.0
-    }
-  }
+  top: "res3b"
 }
 layer {
   name: "res3c_branch2a"
   type: "Convolution"
-  bottom: "res3b_relu"
+  bottom: "res3b"
   top: "res3c_branch2a"
   convolution_param {
     num_output: 128
@@ -548,47 +440,20 @@ layer {
 layer {
   name: "res3c"
   type: "Eltwise"
+  bottom: "res3b"
   bottom: "res3c_branch2c"
-  bottom: "res3b_id"
   top: "res3c"
 }
 layer {
   name: "res3c_relu"
   type: "ReLU"
   bottom: "res3c"
-  top: "res3c_relu"
-}
-layer {
-  name: "res3c_id"
-  type: "Convolution"
-  bottom: "res3c_relu"
-  top: "res3c_id"
-  param {
-    lr_mult: 1.0
-    decay_mult: 1.0
-  }
-  param {
-    lr_mult: 1.0
-    decay_mult: 2.0
-  }
-  convolution_param {
-    num_output: 512
-    pad: 0
-    kernel_size: 1
-    stride: 1
-    weight_filler {
-      type: "msra"
-    }
-    bias_filler {
-      type: "constant"
-      value: 0.0
-    }
-  }
+  top: "res3c"
 }
 layer {
   name: "res3d_branch2a"
   type: "Convolution"
-  bottom: "res3c_relu"
+  bottom: "res3c"
   top: "res3d_branch2a"
   convolution_param {
     num_output: 128
@@ -639,20 +504,20 @@ layer {
 layer {
   name: "res3d"
   type: "Eltwise"
+  bottom: "res3c"
   bottom: "res3d_branch2c"
-  bottom: "res3c_id"
   top: "res3d"
 }
 layer {
   name: "res3d_relu"
   type: "ReLU"
   bottom: "res3d"
-  top: "res3d_relu"
+  top: "res3d"
 }
 layer {
   name: "res4a_branch1"
   type: "Convolution"
-  bottom: "res3d_relu"
+  bottom: "res3d"
   top: "res4a_branch1"
   convolution_param {
     num_output: 1024
@@ -665,7 +530,7 @@ layer {
 layer {
   name: "res4a_branch2a"
   type: "Convolution"
-  bottom: "res3d_relu"
+  bottom: "res3d"
   top: "res4a_branch2a"
   convolution_param {
     num_output: 256
@@ -724,39 +589,12 @@ layer {
   name: "res4a_relu"
   type: "ReLU"
   bottom: "res4a"
-  top: "res4a_relu"
-}
-layer {
-  name: "res4a_id"
-  type: "Convolution"
-  bottom: "res4a_relu"
-  top: "res4a_id"
-  param {
-    lr_mult: 1.0
-    decay_mult: 1.0
-  }
-  param {
-    lr_mult: 1.0
-    decay_mult: 2.0
-  }
-  convolution_param {
-    num_output: 1024
-    pad: 0
-    kernel_size: 1
-    stride: 1
-    weight_filler {
-      type: "msra"
-    }
-    bias_filler {
-      type: "constant"
-      value: 0.0
-    }
-  }
+  top: "res4a"
 }
 layer {
   name: "res4b_branch2a"
   type: "Convolution"
-  bottom: "res4a_relu"
+  bottom: "res4a"
   top: "res4b_branch2a"
   convolution_param {
     num_output: 256
@@ -807,47 +645,20 @@ layer {
 layer {
   name: "res4b"
   type: "Eltwise"
+  bottom: "res4a"
   bottom: "res4b_branch2c"
-  bottom: "res4a_id"
   top: "res4b"
 }
 layer {
   name: "res4b_relu"
   type: "ReLU"
   bottom: "res4b"
-  top: "res4b_relu"
-}
-layer {
-  name: "res4b_id"
-  type: "Convolution"
-  bottom: "res4b_relu"
-  top: "res4b_id"
-  param {
-    lr_mult: 1.0
-    decay_mult: 1.0
-  }
-  param {
-    lr_mult: 1.0
-    decay_mult: 2.0
-  }
-  convolution_param {
-    num_output: 1024
-    pad: 0
-    kernel_size: 1
-    stride: 1
-    weight_filler {
-      type: "msra"
-    }
-    bias_filler {
-      type: "constant"
-      value: 0.0
-    }
-  }
+  top: "res4b"
 }
 layer {
   name: "res4c_branch2a"
   type: "Convolution"
-  bottom: "res4b_relu"
+  bottom: "res4b"
   top: "res4c_branch2a"
   convolution_param {
     num_output: 256
@@ -898,47 +709,20 @@ layer {
 layer {
   name: "res4c"
   type: "Eltwise"
+  bottom: "res4b"
   bottom: "res4c_branch2c"
-  bottom: "res4b_id"
   top: "res4c"
 }
 layer {
   name: "res4c_relu"
   type: "ReLU"
   bottom: "res4c"
-  top: "res4c_relu"
-}
-layer {
-  name: "res4c_id"
-  type: "Convolution"
-  bottom: "res4c_relu"
-  top: "res4c_id"
-  param {
-    lr_mult: 1.0
-    decay_mult: 1.0
-  }
-  param {
-    lr_mult: 1.0
-    decay_mult: 2.0
-  }
-  convolution_param {
-    num_output: 1024
-    pad: 0
-    kernel_size: 1
-    stride: 1
-    weight_filler {
-      type: "msra"
-    }
-    bias_filler {
-      type: "constant"
-      value: 0.0
-    }
-  }
+  top: "res4c"
 }
 layer {
   name: "res4d_branch2a"
   type: "Convolution"
-  bottom: "res4c_relu"
+  bottom: "res4c"
   top: "res4d_branch2a"
   convolution_param {
     num_output: 256
@@ -989,47 +773,20 @@ layer {
 layer {
   name: "res4d"
   type: "Eltwise"
+  bottom: "res4c"
   bottom: "res4d_branch2c"
-  bottom: "res4c_id"
   top: "res4d"
 }
 layer {
   name: "res4d_relu"
   type: "ReLU"
   bottom: "res4d"
-  top: "res4d_relu"
-}
-layer {
-  name: "res4d_id"
-  type: "Convolution"
-  bottom: "res4d_relu"
-  top: "res4d_id"
-  param {
-    lr_mult: 1.0
-    decay_mult: 1.0
-  }
-  param {
-    lr_mult: 1.0
-    decay_mult: 2.0
-  }
-  convolution_param {
-    num_output: 1024
-    pad: 0
-    kernel_size: 1
-    stride: 1
-    weight_filler {
-      type: "msra"
-    }
-    bias_filler {
-      type: "constant"
-      value: 0.0
-    }
-  }
+  top: "res4d"
 }
 layer {
   name: "res4e_branch2a"
   type: "Convolution"
-  bottom: "res4d_relu"
+  bottom: "res4d"
   top: "res4e_branch2a"
   convolution_param {
     num_output: 256
@@ -1080,47 +837,20 @@ layer {
 layer {
   name: "res4e"
   type: "Eltwise"
+  bottom: "res4d"
   bottom: "res4e_branch2c"
-  bottom: "res4d_id"
   top: "res4e"
 }
 layer {
   name: "res4e_relu"
   type: "ReLU"
   bottom: "res4e"
-  top: "res4e_relu"
-}
-layer {
-  name: "res4e_id"
-  type: "Convolution"
-  bottom: "res4e_relu"
-  top: "res4e_id"
-  param {
-    lr_mult: 1.0
-    decay_mult: 1.0
-  }
-  param {
-    lr_mult: 1.0
-    decay_mult: 2.0
-  }
-  convolution_param {
-    num_output: 1024
-    pad: 0
-    kernel_size: 1
-    stride: 1
-    weight_filler {
-      type: "msra"
-    }
-    bias_filler {
-      type: "constant"
-      value: 0.0
-    }
-  }
+  top: "res4e"
 }
 layer {
   name: "res4f_branch2a"
   type: "Convolution"
-  bottom: "res4e_relu"
+  bottom: "res4e"
   top: "res4f_branch2a"
   convolution_param {
     num_output: 256
@@ -1171,20 +901,20 @@ layer {
 layer {
   name: "res4f"
   type: "Eltwise"
+  bottom: "res4e"
   bottom: "res4f_branch2c"
-  bottom: "res4e_id"
   top: "res4f"
 }
 layer {
   name: "res4f_relu"
   type: "ReLU"
   bottom: "res4f"
-  top: "res4f_relu"
+  top: "res4f"
 }
 layer {
   name: "res5a_branch1"
   type: "Convolution"
-  bottom: "res4f_relu"
+  bottom: "res4f"
   top: "res5a_branch1"
   convolution_param {
     num_output: 2048
@@ -1197,7 +927,7 @@ layer {
 layer {
   name: "res5a_branch2a"
   type: "Convolution"
-  bottom: "res4f_relu"
+  bottom: "res4f"
   top: "res5a_branch2a"
   convolution_param {
     num_output: 512
@@ -1256,39 +986,12 @@ layer {
   name: "res5a_relu"
   type: "ReLU"
   bottom: "res5a"
-  top: "res5a_relu"
-}
-layer {
-  name: "res5a_id"
-  type: "Convolution"
-  bottom: "res5a_relu"
-  top: "res5a_id"
-  param {
-    lr_mult: 1.0
-    decay_mult: 1.0
-  }
-  param {
-    lr_mult: 1.0
-    decay_mult: 2.0
-  }
-  convolution_param {
-    num_output: 2048
-    pad: 0
-    kernel_size: 1
-    stride: 1
-    weight_filler {
-      type: "msra"
-    }
-    bias_filler {
-      type: "constant"
-      value: 0.0
-    }
-  }
+  top: "res5a"
 }
 layer {
   name: "res5b_branch2a"
   type: "Convolution"
-  bottom: "res5a_relu"
+  bottom: "res5a"
   top: "res5b_branch2a"
   convolution_param {
     num_output: 512
@@ -1339,47 +1042,20 @@ layer {
 layer {
   name: "res5b"
   type: "Eltwise"
+  bottom: "res5a"
   bottom: "res5b_branch2c"
-  bottom: "res5a_id"
   top: "res5b"
 }
 layer {
   name: "res5b_relu"
   type: "ReLU"
   bottom: "res5b"
-  top: "res5b_relu"
-}
-layer {
-  name: "res5b_id"
-  type: "Convolution"
-  bottom: "res5b_relu"
-  top: "res5b_id"
-  param {
-    lr_mult: 1.0
-    decay_mult: 1.0
-  }
-  param {
-    lr_mult: 1.0
-    decay_mult: 2.0
-  }
-  convolution_param {
-    num_output: 2048
-    pad: 0
-    kernel_size: 1
-    stride: 1
-    weight_filler {
-      type: "msra"
-    }
-    bias_filler {
-      type: "constant"
-      value: 0.0
-    }
-  }
+  top: "res5b"
 }
 layer {
   name: "res5c_branch2a"
   type: "Convolution"
-  bottom: "res5b_relu"
+  bottom: "res5b"
   top: "res5c_branch2a"
   convolution_param {
     num_output: 512
@@ -1430,25 +1106,24 @@ layer {
 layer {
   name: "res5c"
   type: "Eltwise"
+  bottom: "res5b"
   bottom: "res5c_branch2c"
-  bottom: "res5b_id"
   top: "res5c"
 }
 layer {
   name: "res5c_relu"
   type: "ReLU"
   bottom: "res5c"
-  top: "res5c_relu"
+  top: "res5c"
 }
 layer {
   name: "pool5"
   type: "Pooling"
-  bottom: "res5c_relu"
+  bottom: "res5c"
   top: "pool5"
   pooling_param {
     pool: AVE
-    kernel_size: 7
-    stride: 1
+    global_pooling: true
   }
 }
 layer {

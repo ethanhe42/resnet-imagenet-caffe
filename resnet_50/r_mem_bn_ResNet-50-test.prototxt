@@ -310,7 +310,7 @@ layer {
   bottom: "res2c"
   top: "res3a_branch1"
   convolution_param {
-    num_output: 512
+    num_output: 256
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -361,7 +361,7 @@ layer {
   bottom: "res3a_branch2b"
   top: "res3a_branch2c"
   convolution_param {
-    num_output: 512
+    num_output: 256
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -660,7 +660,7 @@ layer {
   bottom: "res3d"
   top: "res4a_branch1"
   convolution_param {
-    num_output: 1024
+    num_output: 512
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -711,7 +711,7 @@ layer {
   bottom: "res4a_branch2b"
   top: "res4a_branch2c"
   convolution_param {
-    num_output: 1024
+    num_output: 512
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -1192,7 +1192,7 @@ layer {
   bottom: "res4f"
   top: "res5a_branch1"
   convolution_param {
-    num_output: 2048
+    num_output: 1024
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -1243,7 +1243,7 @@ layer {
   bottom: "res5a_branch2b"
   top: "res5a_branch2c"
   convolution_param {
-    num_output: 2048
+    num_output: 1024
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -1452,8 +1452,7 @@ layer {
   top: "pool5"
   pooling_param {
     pool: AVE
-    kernel_size: 7
-    stride: 1
+    global_pooling: true
   }
 }
 layer {

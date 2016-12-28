@@ -17,7 +17,7 @@ layer {
   }
   data_param {
     source: "/home/heyihui/heyihui-local/caffe/examples/imagenet/ilsvrc12_train_lmdb"
-    batch_size: 32
+    batch_size: 8
     backend: LMDB
     #prefetch: 50
   }
@@ -31,16 +31,17 @@ layer {
     phase: TEST
   }
   transform_param {
-    crop_size: 224
-    # mean_value: 104.0
-    # mean_value: 117.0
-    # mean_value: 123.0
+    mean_value: 104.0
+    mean_value: 117.0
+    mean_value: 123.0
     #mean_file: "/home/heyihui/resnet-imagenet-caffe/resnet_50/ResNet_mean.binaryproto"
-    mean_file: "/home/heyihui/heyihui-local/caffe/data/ilsvrc12/imagenet_mean.binaryproto"
+    #mean_file: "newproto"
+    #mean_file: "/home/heyihui/heyihui-local/caffe/data/ilsvrc12/imagenet_mean.binaryproto"
   }
   data_param {
+    crop_size: 224
     source: "/home/heyihui/heyihui-local/caffe/examples/imagenet/ilsvrc12_val_lmdb"
-    batch_size: 32
+    batch_size: 8
     backend: LMDB
   }
 }

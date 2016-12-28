@@ -1,0 +1,16 @@
+net: "resnet_50/finetune2x.prototxt"
+test_iter: 1000
+test_interval: 4000
+test_initialization: true
+display: 1000
+average_loss: 1000
+base_lr: 0.001
+lr_policy: "step"
+stepsize: 320000
+gamma: 0.96
+max_iter: 100000
+momentum: 0.9
+weight_decay: 0.0001
+snapshot: 20000
+snapshot_prefix: "resnet_50/models/fine2x"
+solver_mode: GPU

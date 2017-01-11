@@ -4294,3 +4294,13 @@ layer {
     top_k: 5
   }
 }
+layer {
+  name: "loss"
+  type: "SoftmaxWithLoss"
+  bottom: "fc1000"
+  bottom: "label"
+  top: "loss"
+  include {
+    phase: TRAIN
+  }
+}

@@ -88,7 +88,7 @@ layer {
   bottom: "pool1"
   top: "res2a_branch2a"
   convolution_param {
-    num_output: 32
+    num_output: 43
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -107,7 +107,7 @@ layer {
   bottom: "res2a_branch2a"
   top: "res2a_branch2b"
   convolution_param {
-    num_output: 36
+    num_output: 40
     bias_term: true
     pad: 1
     kernel_size: 3
@@ -152,7 +152,7 @@ layer {
   bottom: "res2a"
   top: "res2b_branch2a"
   convolution_param {
-    num_output: 37
+    num_output: 43
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -171,7 +171,7 @@ layer {
   bottom: "res2b_branch2a"
   top: "res2b_branch2b"
   convolution_param {
-    num_output: 38
+    num_output: 41
     bias_term: true
     pad: 1
     kernel_size: 3
@@ -216,7 +216,7 @@ layer {
   bottom: "res2b"
   top: "res2c_branch2a"
   convolution_param {
-    num_output: 34
+    num_output: 38
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -235,7 +235,7 @@ layer {
   bottom: "res2c_branch2a"
   top: "res2c_branch2b"
   convolution_param {
-    num_output: 38
+    num_output: 40
     bias_term: true
     pad: 1
     kernel_size: 3
@@ -293,7 +293,7 @@ layer {
   bottom: "res2c"
   top: "res3a_branch2a"
   convolution_param {
-    num_output: 67
+    num_output: 78
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -312,7 +312,7 @@ layer {
   bottom: "res3a_branch2a"
   top: "res3a_branch2b"
   convolution_param {
-    num_output: 70
+    num_output: 83
     bias_term: true
     pad: 1
     kernel_size: 3
@@ -357,7 +357,7 @@ layer {
   bottom: "res3a"
   top: "res3b_branch2a"
   convolution_param {
-    num_output: 74
+    num_output: 85
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -376,7 +376,7 @@ layer {
   bottom: "res3b_branch2a"
   top: "res3b_branch2b"
   convolution_param {
-    num_output: 70
+    num_output: 79
     bias_term: true
     pad: 1
     kernel_size: 3
@@ -421,7 +421,7 @@ layer {
   bottom: "res3b"
   top: "res3c_branch2a"
   convolution_param {
-    num_output: 73
+    num_output: 88
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -440,7 +440,7 @@ layer {
   bottom: "res3c_branch2a"
   top: "res3c_branch2b"
   convolution_param {
-    num_output: 65
+    num_output: 79
     bias_term: true
     pad: 1
     kernel_size: 3
@@ -485,7 +485,7 @@ layer {
   bottom: "res3c"
   top: "res3d_branch2a"
   convolution_param {
-    num_output: 72
+    num_output: 78
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -504,7 +504,7 @@ layer {
   bottom: "res3d_branch2a"
   top: "res3d_branch2b"
   convolution_param {
-    num_output: 68
+    num_output: 77
     bias_term: true
     pad: 1
     kernel_size: 3
@@ -562,7 +562,7 @@ layer {
   bottom: "res3d"
   top: "res4a_branch2a"
   convolution_param {
-    num_output: 140
+    num_output: 160
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -581,7 +581,7 @@ layer {
   bottom: "res4a_branch2a"
   top: "res4a_branch2b"
   convolution_param {
-    num_output: 142
+    num_output: 169
     bias_term: true
     pad: 1
     kernel_size: 3
@@ -626,7 +626,7 @@ layer {
   bottom: "res4a"
   top: "res4b_branch2a"
   convolution_param {
-    num_output: 138
+    num_output: 161
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -645,7 +645,7 @@ layer {
   bottom: "res4b_branch2a"
   top: "res4b_branch2b"
   convolution_param {
-    num_output: 147
+    num_output: 161
     bias_term: true
     pad: 1
     kernel_size: 3
@@ -690,7 +690,7 @@ layer {
   bottom: "res4b"
   top: "res4c_branch2a"
   convolution_param {
-    num_output: 139
+    num_output: 165
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -709,7 +709,7 @@ layer {
   bottom: "res4c_branch2a"
   top: "res4c_branch2b"
   convolution_param {
-    num_output: 150
+    num_output: 170
     bias_term: true
     pad: 1
     kernel_size: 3
@@ -754,7 +754,7 @@ layer {
   bottom: "res4c"
   top: "res4d_branch2a"
   convolution_param {
-    num_output: 139
+    num_output: 155
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -773,7 +773,7 @@ layer {
   bottom: "res4d_branch2a"
   top: "res4d_branch2b"
   convolution_param {
-    num_output: 149
+    num_output: 166
     bias_term: true
     pad: 1
     kernel_size: 3
@@ -818,7 +818,7 @@ layer {
   bottom: "res4d"
   top: "res4e_branch2a"
   convolution_param {
-    num_output: 145
+    num_output: 155
     bias_term: true
     pad: 0
     kernel_size: 1
@@ -1188,5 +1188,15 @@ layer {
   top: "accuracy@5"
   accuracy_param {
     top_k: 5
+  }
+}
+layer {
+  name: "loss"
+  type: "SoftmaxWithLoss"
+  bottom: "fc1000"
+  bottom: "label"
+  top: "loss"
+  include {
+    phase: TRAIN
   }
 }

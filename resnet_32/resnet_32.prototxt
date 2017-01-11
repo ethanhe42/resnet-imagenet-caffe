@@ -10,27 +10,35 @@ layer {
   transform_param {
     mirror: true
     crop_size: 224
-    mean_file: "mean.binaryproto"
+    mean_value: 104.0
+    mean_value: 117.0
+    mean_value: 123.0
   }
   data_param {
-    source: "train.lmdb"
+    source: "/home/heyihui/heyihui-local/caffe/examples/imagenet/ilsvrc12_train_lmdb"
     batch_size: 32
     backend: LMDB
+    #prefetch: 50
   }
 }
 layer {
   name: "resnet_32"
-  type: "MemoryData"
+  type: "Data"
   top: "data"
   top: "label"
-  memory_data_param {
-    batch_size: 32
-    channels: 3
-    height: 224
-    width: 224
-  }
- include {
+  include {
     phase: TEST
+  }
+  transform_param {
+    crop_size: 224
+    mean_value: 104.0
+    mean_value: 117.0
+    mean_value: 123.0
+  }
+  data_param {
+    source: "/home/heyihui/heyihui-local/caffe/examples/imagenet/ilsvrc12_val_lmdb"
+    batch_size: 8
+    backend: LMDB
   }
 }
 layer {
@@ -44,7 +52,7 @@ layer {
 		pad: 3
 		stride: 2
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -104,7 +112,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -145,7 +153,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -193,7 +201,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -241,7 +249,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -297,7 +305,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -345,7 +353,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -393,7 +401,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -449,7 +457,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -497,7 +505,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -545,7 +553,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -601,7 +609,7 @@ layer {
 		stride: 2
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -642,7 +650,7 @@ layer {
 		stride: 2
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -690,7 +698,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -738,7 +746,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -794,7 +802,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -842,7 +850,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -890,7 +898,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -946,7 +954,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -994,7 +1002,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -1042,7 +1050,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -1098,7 +1106,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -1146,7 +1154,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -1194,7 +1202,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -1250,7 +1258,7 @@ layer {
 		stride: 2
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -1291,7 +1299,7 @@ layer {
 		stride: 2
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -1339,7 +1347,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -1387,7 +1395,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -1443,7 +1451,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -1491,7 +1499,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -1539,7 +1547,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -1595,7 +1603,7 @@ layer {
 		stride: 1
 		bias_term: false
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -1651,7 +1659,7 @@ layer {
 	inner_product_param {
 		num_output: 1000
 		weight_filler {
-      		  type: "xavier"
+      		  type: "msra"
     		}
     		bias_filler {
       		  type: "constant"
@@ -1661,22 +1669,32 @@ layer {
 }
 
 layer {
-	bottom: "fc1000"
-	bottom: "label"
-	top: "prob"
-	name: "prob"
-	type: "SoftmaxWithLoss"
-	include {
-	  phase: TRAIN
-	}
+  name: "prob"
+  type: "SoftmaxWithLoss"
+  bottom: "fc1000"
+  bottom: "label"
+  top: "prob"
+  include {
+    phase: TRAIN
+  }
 }
 layer {
-       name: "probt"
-       type: "Softmax"
-       bottom: "fc1000"
-       top: "probt"
-       include {
-	   phase: TEST
-	}
+  bottom: "fc1000"
+  bottom: "label"
+  top: "accuracy@1"
+  name: "accuracy/top1"
+  type: "Accuracy"
+  accuracy_param {
+    top_k: 1
+  }
 }
-		
+layer {
+  bottom: "fc1000"
+  bottom: "label"
+  top: "accuracy@5"
+  name: "accuracy/top5"
+  type: "Accuracy"
+  accuracy_param {
+    top_k: 5
+  }
+}

@@ -56,7 +56,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0.2
+      value: 0
     }
   }
 }
@@ -108,10 +108,6 @@ layer {
     weight_filler {
       type: "msra"
     }
-    bias_filler {
-      type: "constant"
-      value: 0.2
-    }
   }
 }
 layer {
@@ -144,10 +140,6 @@ layer {
     stride: 1
     weight_filler {
       type: "msra"
-    }
-    bias_filler {
-      type: "constant"
-      value: 0.2
     }
   }
 }
@@ -188,10 +180,6 @@ layer {
     weight_filler {
       type: "msra"
     }
-    bias_filler {
-      type: "constant"
-      value: 0.2
-    }
   }
 }
 layer {
@@ -230,10 +218,6 @@ layer {
     stride: 1
     weight_filler {
       type: "msra"
-    }
-    bias_filler {
-      type: "constant"
-      value: 0.2
     }
   }
 }
@@ -281,10 +265,6 @@ layer {
     weight_filler {
       type: "msra"
     }
-    bias_filler {
-      type: "constant"
-      value: 0.2
-    }
   }
 }
 layer {
@@ -324,10 +304,6 @@ layer {
     weight_filler {
       type: "msra"
     }
-    bias_filler {
-      type: "constant"
-      value: 0.2
-    }
   }
 }
 layer {
@@ -366,10 +342,6 @@ layer {
     stride: 1
     weight_filler {
       type: "msra"
-    }
-    bias_filler {
-      type: "constant"
-      value: 0.2
     }
   }
 }
@@ -417,10 +389,6 @@ layer {
     weight_filler {
       type: "msra"
     }
-    bias_filler {
-      type: "constant"
-      value: 0.2
-    }
   }
 }
 layer {
@@ -460,10 +428,6 @@ layer {
     weight_filler {
       type: "msra"
     }
-    bias_filler {
-      type: "constant"
-      value: 0.2
-    }
   }
 }
 layer {
@@ -502,10 +466,6 @@ layer {
     stride: 1
     weight_filler {
       type: "msra"
-    }
-    bias_filler {
-      type: "constant"
-      value: 0.2
     }
   }
 }
@@ -553,10 +513,6 @@ layer {
     weight_filler {
       type: "msra"
     }
-    bias_filler {
-      type: "constant"
-      value: 0.2
-    }
   }
 }
 layer {
@@ -589,10 +545,6 @@ layer {
     stride: 2
     weight_filler {
       type: "msra"
-    }
-    bias_filler {
-      type: "constant"
-      value: 0.2
     }
   }
 }
@@ -633,10 +585,6 @@ layer {
     weight_filler {
       type: "msra"
     }
-    bias_filler {
-      type: "constant"
-      value: 0.2
-    }
   }
 }
 layer {
@@ -675,10 +623,6 @@ layer {
     stride: 1
     weight_filler {
       type: "msra"
-    }
-    bias_filler {
-      type: "constant"
-      value: 0.2
     }
   }
 }
@@ -726,10 +670,6 @@ layer {
     weight_filler {
       type: "msra"
     }
-    bias_filler {
-      type: "constant"
-      value: 0.2
-    }
   }
 }
 layer {
@@ -769,10 +709,6 @@ layer {
     weight_filler {
       type: "msra"
     }
-    bias_filler {
-      type: "constant"
-      value: 0.2
-    }
   }
 }
 layer {
@@ -811,10 +747,6 @@ layer {
     stride: 1
     weight_filler {
       type: "msra"
-    }
-    bias_filler {
-      type: "constant"
-      value: 0.2
     }
   }
 }

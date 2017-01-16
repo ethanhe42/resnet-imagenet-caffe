@@ -1,5 +1,9 @@
 # train resnet imagenet with caffe
+All models are trained on 4 GPUs with a minibatch size of 32.
 ### resnet-18
+coming soon
+### resnet-50
+coming soon
 ### resnet-32
 This is a bottleneck architecture,  
 Since there's no strong data augmentation and 10-crop test in caffe, the results maybe a bit low.  

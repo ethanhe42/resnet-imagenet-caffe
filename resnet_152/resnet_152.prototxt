@@ -16,7 +16,7 @@ layer {
   }
   data_param {
     source: "/home/heyihui/heyihui-local/caffe/examples/imagenet/ilsvrc12_train_lmdb"
-    batch_size: 16
+    batch_size: 8
     backend: LMDB
     #prefetch: 50
   }

@@ -4642,3 +4642,531 @@ I0117 13:35:31.693517 20583 solver.cpp:244]     Train net output #0: accuracy@1 
 I0117 13:35:31.693567 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.75
 I0117 13:35:31.693585 20583 solver.cpp:244]     Train net output #2: prob = 1.88619 (* 1 = 1.88619 loss)
 I0117 13:35:31.940148 20583 sgd_solver.cpp:106] Iteration 124000, lr = 0.1
+I0117 13:48:11.235250 20583 solver.cpp:228] Iteration 125000, loss = 2.01306
+I0117 13:48:11.235451 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.4375
+I0117 13:48:11.235465 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.75
+I0117 13:48:11.235478 20583 solver.cpp:244]     Train net output #2: prob = 2.53764 (* 1 = 2.53764 loss)
+I0117 13:48:11.483706 20583 sgd_solver.cpp:106] Iteration 125000, lr = 0.1
+I0117 14:01:10.175046 20583 solver.cpp:228] Iteration 126000, loss = 2.00934
+I0117 14:01:10.175205 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.4375
+I0117 14:01:10.175217 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.6875
+I0117 14:01:10.175230 20583 solver.cpp:244]     Train net output #2: prob = 2.17264 (* 1 = 2.17264 loss)
+I0117 14:01:10.443658 20583 sgd_solver.cpp:106] Iteration 126000, lr = 0.1
+I0117 14:13:58.303768 20583 solver.cpp:228] Iteration 127000, loss = 1.99891
+I0117 14:13:58.304096 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.59375
+I0117 14:13:58.304141 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.84375
+I0117 14:13:58.304173 20583 solver.cpp:244]     Train net output #2: prob = 1.80301 (* 1 = 1.80301 loss)
+I0117 14:13:58.578421 20583 sgd_solver.cpp:106] Iteration 127000, lr = 0.1
+I0117 14:26:14.713143 20583 solver.cpp:228] Iteration 128000, loss = 2.0101
+I0117 14:26:14.713392 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.34375
+I0117 14:26:14.713430 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.625
+I0117 14:26:14.713455 20583 solver.cpp:244]     Train net output #2: prob = 2.72619 (* 1 = 2.72619 loss)
+I0117 14:26:14.985944 20583 sgd_solver.cpp:106] Iteration 128000, lr = 0.1
+I0117 14:38:31.317652 20583 solver.cpp:228] Iteration 129000, loss = 2.01288
+I0117 14:38:31.317994 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.6875
+I0117 14:38:31.318023 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.84375
+I0117 14:38:31.318043 20583 solver.cpp:244]     Train net output #2: prob = 1.38758 (* 1 = 1.38758 loss)
+I0117 14:38:31.593807 20583 sgd_solver.cpp:106] Iteration 129000, lr = 0.1
+I0117 14:50:47.635872 20583 solver.cpp:228] Iteration 130000, loss = 2.00159
+I0117 14:50:47.636106 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.59375
+I0117 14:50:47.636133 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.84375
+I0117 14:50:47.636147 20583 solver.cpp:244]     Train net output #2: prob = 1.83758 (* 1 = 1.83758 loss)
+I0117 14:50:47.896826 20583 sgd_solver.cpp:106] Iteration 130000, lr = 0.1
+I0117 15:03:03.700224 20583 solver.cpp:228] Iteration 131000, loss = 2.003
+I0117 15:03:03.700423 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.5625
+I0117 15:03:03.700433 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.8125
+I0117 15:03:03.700455 20583 solver.cpp:244]     Train net output #2: prob = 1.58492 (* 1 = 1.58492 loss)
+I0117 15:03:03.970051 20583 sgd_solver.cpp:106] Iteration 131000, lr = 0.1
+I0117 15:15:20.997061 20583 solver.cpp:228] Iteration 132000, loss = 1.99749
+I0117 15:15:20.997287 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.5
+I0117 15:15:20.997315 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.8125
+I0117 15:15:20.997928 20583 solver.cpp:244]     Train net output #2: prob = 1.95145 (* 1 = 1.95145 loss)
+I0117 15:15:21.260615 20583 sgd_solver.cpp:106] Iteration 132000, lr = 0.1
+I0117 15:27:36.421608 20583 solver.cpp:228] Iteration 133000, loss = 1.99318
+I0117 15:27:36.421843 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.46875
+I0117 15:27:36.421851 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.78125
+I0117 15:27:36.421862 20583 solver.cpp:244]     Train net output #2: prob = 2.10972 (* 1 = 2.10972 loss)
+I0117 15:27:36.695140 20583 sgd_solver.cpp:106] Iteration 133000, lr = 0.1
+I0117 15:39:52.952309 20583 solver.cpp:228] Iteration 134000, loss = 1.99447
+I0117 15:39:52.952653 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.5625
+I0117 15:39:52.952692 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.875
+I0117 15:39:52.952718 20583 solver.cpp:244]     Train net output #2: prob = 1.71305 (* 1 = 1.71305 loss)
+I0117 15:39:53.221954 20583 sgd_solver.cpp:106] Iteration 134000, lr = 0.1
+I0117 15:52:09.839323 20583 solver.cpp:228] Iteration 135000, loss = 2.00236
+I0117 15:52:09.839582 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.53125
+I0117 15:52:09.839613 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.71875
+I0117 15:52:09.839625 20583 solver.cpp:244]     Train net output #2: prob = 2.22868 (* 1 = 2.22868 loss)
+I0117 15:52:10.099786 20583 sgd_solver.cpp:106] Iteration 135000, lr = 0.1
+I0117 16:04:50.785248 20583 solver.cpp:228] Iteration 136000, loss = 2.00752
+I0117 16:04:50.785460 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.5625
+I0117 16:04:50.785475 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.75
+I0117 16:04:50.785491 20583 solver.cpp:244]     Train net output #2: prob = 2.26562 (* 1 = 2.26562 loss)
+I0117 16:04:51.054802 20583 sgd_solver.cpp:106] Iteration 136000, lr = 0.1
+I0117 16:17:47.959794 20583 solver.cpp:228] Iteration 137000, loss = 2.00583
+I0117 16:17:47.960052 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.46875
+I0117 16:17:47.960070 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.78125
+I0117 16:17:47.960085 20583 solver.cpp:244]     Train net output #2: prob = 2.36504 (* 1 = 2.36504 loss)
+I0117 16:17:48.293679 20583 sgd_solver.cpp:106] Iteration 137000, lr = 0.1
+I0117 16:30:44.440012 20583 solver.cpp:228] Iteration 138000, loss = 2.00526
+I0117 16:30:44.440440 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.6875
+I0117 16:30:44.440510 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.8125
+I0117 16:30:44.440582 20583 solver.cpp:244]     Train net output #2: prob = 1.59546 (* 1 = 1.59546 loss)
+I0117 16:30:44.753139 20583 sgd_solver.cpp:106] Iteration 138000, lr = 0.1
+I0117 16:43:41.118402 20583 solver.cpp:228] Iteration 139000, loss = 2.00502
+I0117 16:43:41.118548 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.59375
+I0117 16:43:41.118559 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.84375
+I0117 16:43:41.118572 20583 solver.cpp:244]     Train net output #2: prob = 1.46121 (* 1 = 1.46121 loss)
+I0117 16:43:41.383671 20583 sgd_solver.cpp:106] Iteration 139000, lr = 0.1
+I0117 16:56:37.564656 20583 solver.cpp:228] Iteration 140000, loss = 1.99275
+I0117 16:56:37.564908 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.625
+I0117 16:56:37.564945 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.78125
+I0117 16:56:37.564988 20583 solver.cpp:244]     Train net output #2: prob = 1.95607 (* 1 = 1.95607 loss)
+I0117 16:56:37.837276 20583 sgd_solver.cpp:106] Iteration 140000, lr = 0.1
+I0117 17:09:34.569475 20583 solver.cpp:228] Iteration 141000, loss = 1.99529
+I0117 17:09:34.569648 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.59375
+I0117 17:09:34.569661 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.90625
+I0117 17:09:34.569674 20583 solver.cpp:244]     Train net output #2: prob = 1.5241 (* 1 = 1.5241 loss)
+I0117 17:09:34.838819 20583 sgd_solver.cpp:106] Iteration 141000, lr = 0.1
+I0117 17:22:31.632141 20583 solver.cpp:228] Iteration 142000, loss = 1.99037
+I0117 17:22:31.632323 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.53125
+I0117 17:22:31.632335 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.84375
+I0117 17:22:31.632350 20583 solver.cpp:244]     Train net output #2: prob = 1.57289 (* 1 = 1.57289 loss)
+I0117 17:22:31.894824 20583 sgd_solver.cpp:106] Iteration 142000, lr = 0.1
+I0117 17:35:27.949689 20583 solver.cpp:228] Iteration 143000, loss = 1.9976
+I0117 17:35:27.949928 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.59375
+I0117 17:35:27.949957 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.875
+I0117 17:35:27.949983 20583 solver.cpp:244]     Train net output #2: prob = 1.5113 (* 1 = 1.5113 loss)
+I0117 17:35:28.230123 20583 sgd_solver.cpp:106] Iteration 143000, lr = 0.1
+I0117 17:48:22.985975 20583 solver.cpp:228] Iteration 144000, loss = 1.99599
+I0117 17:48:22.986219 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.59375
+I0117 17:48:22.986253 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.75
+I0117 17:48:22.986287 20583 solver.cpp:244]     Train net output #2: prob = 2.02826 (* 1 = 2.02826 loss)
+I0117 17:48:23.264825 20583 sgd_solver.cpp:106] Iteration 144000, lr = 0.1
+I0117 18:01:18.714109 20583 solver.cpp:228] Iteration 145000, loss = 2.01651
+I0117 18:01:18.714334 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.46875
+I0117 18:01:18.714365 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.84375
+I0117 18:01:18.714395 20583 solver.cpp:244]     Train net output #2: prob = 2.05128 (* 1 = 2.05128 loss)
+I0117 18:01:19.013670 20583 sgd_solver.cpp:106] Iteration 145000, lr = 0.1
+I0117 18:14:15.407838 20583 solver.cpp:228] Iteration 146000, loss = 1.9877
+I0117 18:14:15.408069 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.65625
+I0117 18:14:15.408099 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.8125
+I0117 18:14:15.408128 20583 solver.cpp:244]     Train net output #2: prob = 1.54727 (* 1 = 1.54727 loss)
+I0117 18:14:15.663658 20583 sgd_solver.cpp:106] Iteration 146000, lr = 0.1
+I0117 18:27:12.042716 20583 solver.cpp:228] Iteration 147000, loss = 1.97925
+I0117 18:27:12.042906 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.625
+I0117 18:27:12.042917 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.8125
+I0117 18:27:12.042932 20583 solver.cpp:244]     Train net output #2: prob = 1.80774 (* 1 = 1.80774 loss)
+I0117 18:27:12.323684 20583 sgd_solver.cpp:106] Iteration 147000, lr = 0.1
+I0117 18:40:09.436264 20583 solver.cpp:228] Iteration 148000, loss = 1.99311
+I0117 18:40:09.436467 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.53125
+I0117 18:40:09.436482 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.8125
+I0117 18:40:09.436498 20583 solver.cpp:244]     Train net output #2: prob = 1.97576 (* 1 = 1.97576 loss)
+I0117 18:40:09.716765 20583 sgd_solver.cpp:106] Iteration 148000, lr = 0.1
+I0117 18:53:07.024011 20583 solver.cpp:228] Iteration 149000, loss = 1.99525
+I0117 18:53:07.024256 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.59375
+I0117 18:53:07.024289 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.8125
+I0117 18:53:07.024322 20583 solver.cpp:244]     Train net output #2: prob = 1.45349 (* 1 = 1.45349 loss)
+I0117 18:53:07.293673 20583 sgd_solver.cpp:106] Iteration 149000, lr = 0.1
+I0117 19:06:03.089076 20583 solver.cpp:454] Snapshotting to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_50/snapshot/resnet_50_iter_150000.caffemodel
+I0117 19:06:03.520828 20583 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_50/snapshot/resnet_50_iter_150000.solverstate
+I0117 19:06:04.229070 20583 solver.cpp:228] Iteration 150000, loss = 1.99216
+I0117 19:06:04.229178 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.625
+I0117 19:06:04.229210 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.90625
+I0117 19:06:04.229244 20583 solver.cpp:244]     Train net output #2: prob = 1.55815 (* 1 = 1.55815 loss)
+I0117 19:06:04.508339 20583 sgd_solver.cpp:106] Iteration 150000, lr = 0.1
+I0117 19:18:26.921630 20583 solver.cpp:228] Iteration 151000, loss = 2.00186
+I0117 19:18:26.921856 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.53125
+I0117 19:18:26.921886 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.71875
+I0117 19:18:26.923117 20583 solver.cpp:244]     Train net output #2: prob = 2.2856 (* 1 = 2.2856 loss)
+I0117 19:18:27.186453 20583 sgd_solver.cpp:106] Iteration 151000, lr = 0.1
+I0117 19:30:43.161141 20583 solver.cpp:228] Iteration 152000, loss = 1.98899
+I0117 19:30:43.161372 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.65625
+I0117 19:30:43.161412 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.8125
+I0117 19:30:43.161440 20583 solver.cpp:244]     Train net output #2: prob = 1.81715 (* 1 = 1.81715 loss)
+I0117 19:30:43.437824 20583 sgd_solver.cpp:106] Iteration 152000, lr = 0.1
+I0117 19:43:00.275352 20583 solver.cpp:228] Iteration 153000, loss = 2.00889
+I0117 19:43:00.275604 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.6875
+I0117 19:43:00.275624 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.8125
+I0117 19:43:00.275645 20583 solver.cpp:244]     Train net output #2: prob = 1.58667 (* 1 = 1.58667 loss)
+I0117 19:43:00.536196 20583 sgd_solver.cpp:106] Iteration 153000, lr = 0.1
+I0117 19:55:18.497825 20583 solver.cpp:228] Iteration 154000, loss = 1.99984
+I0117 19:55:18.498064 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.375
+I0117 19:55:18.498105 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.75
+I0117 19:55:18.498123 20583 solver.cpp:244]     Train net output #2: prob = 2.30861 (* 1 = 2.30861 loss)
+I0117 19:55:18.771006 20583 sgd_solver.cpp:106] Iteration 154000, lr = 0.1
+I0117 20:07:37.806280 20583 solver.cpp:228] Iteration 155000, loss = 2.00878
+I0117 20:07:37.806521 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.5625
+I0117 20:07:37.806547 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.8125
+I0117 20:07:37.806560 20583 solver.cpp:244]     Train net output #2: prob = 1.91322 (* 1 = 1.91322 loss)
+I0117 20:07:38.078013 20583 sgd_solver.cpp:106] Iteration 155000, lr = 0.1
+I0117 20:19:55.857630 20583 solver.cpp:228] Iteration 156000, loss = 1.98836
+I0117 20:19:55.857842 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.5625
+I0117 20:19:55.857853 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.78125
+I0117 20:19:55.857863 20583 solver.cpp:244]     Train net output #2: prob = 1.85922 (* 1 = 1.85922 loss)
+I0117 20:19:56.131558 20583 sgd_solver.cpp:106] Iteration 156000, lr = 0.1
+I0117 20:32:13.610996 20583 solver.cpp:228] Iteration 157000, loss = 1.98244
+I0117 20:32:13.611330 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.375
+I0117 20:32:13.611361 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.65625
+I0117 20:32:13.611382 20583 solver.cpp:244]     Train net output #2: prob = 2.64955 (* 1 = 2.64955 loss)
+I0117 20:32:13.874426 20583 sgd_solver.cpp:106] Iteration 157000, lr = 0.1
+I0117 20:44:31.526064 20583 solver.cpp:228] Iteration 158000, loss = 1.98616
+I0117 20:44:31.526337 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.4375
+I0117 20:44:31.526374 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.75
+I0117 20:44:31.526403 20583 solver.cpp:244]     Train net output #2: prob = 2.26017 (* 1 = 2.26017 loss)
+I0117 20:44:31.800602 20583 sgd_solver.cpp:106] Iteration 158000, lr = 0.1
+I0117 20:56:49.288691 20583 solver.cpp:228] Iteration 159000, loss = 1.99186
+I0117 20:56:49.288970 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.53125
+I0117 20:56:49.289010 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.875
+I0117 20:56:49.289031 20583 solver.cpp:244]     Train net output #2: prob = 1.77241 (* 1 = 1.77241 loss)
+I0117 20:56:49.562083 20583 sgd_solver.cpp:106] Iteration 159000, lr = 0.1
+I0117 21:09:07.417295 20583 solver.cpp:228] Iteration 160000, loss = 1.989
+I0117 21:09:07.417536 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.625
+I0117 21:09:07.417564 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.78125
+I0117 21:09:07.417577 20583 solver.cpp:244]     Train net output #2: prob = 1.69974 (* 1 = 1.69974 loss)
+I0117 21:09:07.684653 20583 sgd_solver.cpp:106] Iteration 160000, lr = 0.1
+I0117 21:21:24.851006 20583 solver.cpp:228] Iteration 161000, loss = 1.97484
+I0117 21:21:24.851291 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.6875
+I0117 21:21:24.851341 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.875
+I0117 21:21:24.852133 20583 solver.cpp:244]     Train net output #2: prob = 1.72613 (* 1 = 1.72613 loss)
+I0117 21:21:25.122148 20583 sgd_solver.cpp:106] Iteration 161000, lr = 0.1
+I0117 21:33:41.812654 20583 solver.cpp:228] Iteration 162000, loss = 1.96687
+I0117 21:33:41.812902 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.5625
+I0117 21:33:41.812942 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.84375
+I0117 21:33:41.812963 20583 solver.cpp:244]     Train net output #2: prob = 1.7581 (* 1 = 1.7581 loss)
+I0117 21:33:42.089546 20583 sgd_solver.cpp:106] Iteration 162000, lr = 0.1
+I0117 21:45:58.762348 20583 solver.cpp:228] Iteration 163000, loss = 1.97282
+I0117 21:45:58.762584 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.5
+I0117 21:45:58.762627 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.875
+I0117 21:45:58.762650 20583 solver.cpp:244]     Train net output #2: prob = 1.67478 (* 1 = 1.67478 loss)
+I0117 21:45:59.022750 20583 sgd_solver.cpp:106] Iteration 163000, lr = 0.1
+I0117 21:58:15.103680 20583 solver.cpp:228] Iteration 164000, loss = 1.98489
+I0117 21:58:15.103936 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.625
+I0117 21:58:15.103976 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.875
+I0117 21:58:15.103999 20583 solver.cpp:244]     Train net output #2: prob = 1.64559 (* 1 = 1.64559 loss)
+I0117 21:58:15.375991 20583 sgd_solver.cpp:106] Iteration 164000, lr = 0.1
+I0117 22:10:31.501940 20583 solver.cpp:228] Iteration 165000, loss = 1.97616
+I0117 22:10:31.502197 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.59375
+I0117 22:10:31.502207 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.71875
+I0117 22:10:31.502219 20583 solver.cpp:244]     Train net output #2: prob = 2.25504 (* 1 = 2.25504 loss)
+I0117 22:10:31.777896 20583 sgd_solver.cpp:106] Iteration 165000, lr = 0.1
+I0117 22:22:48.746692 20583 solver.cpp:228] Iteration 166000, loss = 1.97627
+I0117 22:22:48.746932 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.375
+I0117 22:22:48.746942 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.65625
+I0117 22:22:48.746953 20583 solver.cpp:244]     Train net output #2: prob = 2.69147 (* 1 = 2.69147 loss)
+I0117 22:22:49.009964 20583 sgd_solver.cpp:106] Iteration 166000, lr = 0.1
+I0117 22:35:06.066408 20583 solver.cpp:228] Iteration 167000, loss = 1.96467
+I0117 22:35:06.066658 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.4375
+I0117 22:35:06.066700 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.84375
+I0117 22:35:06.066731 20583 solver.cpp:244]     Train net output #2: prob = 1.94999 (* 1 = 1.94999 loss)
+I0117 22:35:06.340788 20583 sgd_solver.cpp:106] Iteration 167000, lr = 0.1
+I0117 22:47:23.794226 20583 solver.cpp:228] Iteration 168000, loss = 1.97091
+I0117 22:47:23.794466 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.5
+I0117 22:47:23.794507 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.71875
+I0117 22:47:23.794525 20583 solver.cpp:244]     Train net output #2: prob = 2.17374 (* 1 = 2.17374 loss)
+I0117 22:47:24.066851 20583 sgd_solver.cpp:106] Iteration 168000, lr = 0.1
+I0117 22:59:41.215492 20583 solver.cpp:228] Iteration 169000, loss = 1.97482
+I0117 22:59:41.215728 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.46875
+I0117 22:59:41.215768 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.78125
+I0117 22:59:41.215788 20583 solver.cpp:244]     Train net output #2: prob = 2.08491 (* 1 = 2.08491 loss)
+I0117 22:59:41.488229 20583 sgd_solver.cpp:106] Iteration 169000, lr = 0.1
+I0117 23:11:58.725673 20583 solver.cpp:228] Iteration 170000, loss = 1.98369
+I0117 23:11:58.725919 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.53125
+I0117 23:11:58.725960 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.8125
+I0117 23:11:58.725985 20583 solver.cpp:244]     Train net output #2: prob = 2.0774 (* 1 = 2.0774 loss)
+I0117 23:11:59.004231 20583 sgd_solver.cpp:106] Iteration 170000, lr = 0.1
+I0117 23:24:16.259541 20583 solver.cpp:228] Iteration 171000, loss = 1.96024
+I0117 23:24:16.259793 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.5625
+I0117 23:24:16.259838 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.71875
+I0117 23:24:16.259858 20583 solver.cpp:244]     Train net output #2: prob = 2.1447 (* 1 = 2.1447 loss)
+I0117 23:24:16.533869 20583 sgd_solver.cpp:106] Iteration 171000, lr = 0.1
+I0117 23:36:32.741587 20583 solver.cpp:228] Iteration 172000, loss = 1.95335
+I0117 23:36:32.741845 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.59375
+I0117 23:36:32.741894 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.8125
+I0117 23:36:32.741925 20583 solver.cpp:244]     Train net output #2: prob = 1.67197 (* 1 = 1.67197 loss)
+I0117 23:36:33.016834 20583 sgd_solver.cpp:106] Iteration 172000, lr = 0.1
+I0117 23:48:49.839766 20583 solver.cpp:228] Iteration 173000, loss = 1.97533
+I0117 23:48:49.840024 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.59375
+I0117 23:48:49.840066 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.78125
+I0117 23:48:49.840097 20583 solver.cpp:244]     Train net output #2: prob = 1.96988 (* 1 = 1.96988 loss)
+I0117 23:48:50.114840 20583 sgd_solver.cpp:106] Iteration 173000, lr = 0.1
+I0118 00:01:07.346940 20583 solver.cpp:228] Iteration 174000, loss = 1.96645
+I0118 00:01:07.347213 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.5625
+I0118 00:01:07.347254 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.75
+I0118 00:01:07.347275 20583 solver.cpp:244]     Train net output #2: prob = 1.79083 (* 1 = 1.79083 loss)
+I0118 00:01:07.619087 20583 sgd_solver.cpp:106] Iteration 174000, lr = 0.1
+I0118 00:13:24.809131 20583 solver.cpp:228] Iteration 175000, loss = 1.97283
+I0118 00:13:24.809401 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.46875
+I0118 00:13:24.809447 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.875
+I0118 00:13:24.809468 20583 solver.cpp:244]     Train net output #2: prob = 1.99793 (* 1 = 1.99793 loss)
+I0118 00:13:25.082418 20583 sgd_solver.cpp:106] Iteration 175000, lr = 0.1
+I0118 00:25:42.797992 20583 solver.cpp:228] Iteration 176000, loss = 1.96882
+I0118 00:25:42.798239 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.34375
+I0118 00:25:42.798266 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.875
+I0118 00:25:42.798286 20583 solver.cpp:244]     Train net output #2: prob = 2.48314 (* 1 = 2.48314 loss)
+I0118 00:25:43.073442 20583 sgd_solver.cpp:106] Iteration 176000, lr = 0.1
+I0118 00:37:58.966881 20583 solver.cpp:228] Iteration 177000, loss = 1.96748
+I0118 00:37:58.967128 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.5
+I0118 00:37:58.967159 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.65625
+I0118 00:37:58.967767 20583 solver.cpp:244]     Train net output #2: prob = 2.28866 (* 1 = 2.28866 loss)
+I0118 00:37:59.228643 20583 sgd_solver.cpp:106] Iteration 177000, lr = 0.1
+I0118 00:50:14.565227 20583 solver.cpp:228] Iteration 178000, loss = 1.97529
+I0118 00:50:14.565466 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.4375
+I0118 00:50:14.565511 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.6875
+I0118 00:50:14.566216 20583 solver.cpp:244]     Train net output #2: prob = 2.51437 (* 1 = 2.51437 loss)
+I0118 00:50:14.825002 20583 sgd_solver.cpp:106] Iteration 178000, lr = 0.1
+I0118 01:02:29.759977 20583 solver.cpp:228] Iteration 179000, loss = 1.97508
+I0118 01:02:29.760342 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.6875
+I0118 01:02:29.760378 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.78125
+I0118 01:02:29.760396 20583 solver.cpp:244]     Train net output #2: prob = 1.46042 (* 1 = 1.46042 loss)
+I0118 01:02:30.020736 20583 sgd_solver.cpp:106] Iteration 179000, lr = 0.1
+I0118 01:14:45.586251 20583 solver.cpp:228] Iteration 180000, loss = 1.97139
+I0118 01:14:45.586474 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.53125
+I0118 01:14:45.586495 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.84375
+I0118 01:14:45.586510 20583 solver.cpp:244]     Train net output #2: prob = 1.76511 (* 1 = 1.76511 loss)
+I0118 01:14:45.850302 20583 sgd_solver.cpp:106] Iteration 180000, lr = 0.1
+I0118 01:27:01.943339 20583 solver.cpp:228] Iteration 181000, loss = 1.95968
+I0118 01:27:01.943588 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.53125
+I0118 01:27:01.943655 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.78125
+I0118 01:27:01.943688 20583 solver.cpp:244]     Train net output #2: prob = 2.05203 (* 1 = 2.05203 loss)
+I0118 01:27:02.206749 20583 sgd_solver.cpp:106] Iteration 181000, lr = 0.1
+I0118 01:39:17.441958 20583 solver.cpp:228] Iteration 182000, loss = 1.96665
+I0118 01:39:17.442237 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.53125
+I0118 01:39:17.442282 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.71875
+I0118 01:39:17.442301 20583 solver.cpp:244]     Train net output #2: prob = 2.44775 (* 1 = 2.44775 loss)
+I0118 01:39:17.705950 20583 sgd_solver.cpp:106] Iteration 182000, lr = 0.1
+I0118 01:51:32.915884 20583 solver.cpp:228] Iteration 183000, loss = 1.95972
+I0118 01:51:32.916119 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.59375
+I0118 01:51:32.916162 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.71875
+I0118 01:51:32.916182 20583 solver.cpp:244]     Train net output #2: prob = 2.06601 (* 1 = 2.06601 loss)
+I0118 01:51:33.189144 20583 sgd_solver.cpp:106] Iteration 183000, lr = 0.1
+I0118 02:03:49.400395 20583 solver.cpp:228] Iteration 184000, loss = 1.96795
+I0118 02:03:49.400635 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.65625
+I0118 02:03:49.400662 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.8125
+I0118 02:03:49.400691 20583 solver.cpp:244]     Train net output #2: prob = 1.59631 (* 1 = 1.59631 loss)
+I0118 02:03:49.672926 20583 sgd_solver.cpp:106] Iteration 184000, lr = 0.1
+I0118 02:16:06.859553 20583 solver.cpp:228] Iteration 185000, loss = 1.98502
+I0118 02:16:06.859738 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.59375
+I0118 02:16:06.859750 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.84375
+I0118 02:16:06.859774 20583 solver.cpp:244]     Train net output #2: prob = 1.78901 (* 1 = 1.78901 loss)
+I0118 02:16:07.120084 20583 sgd_solver.cpp:106] Iteration 185000, lr = 0.1
+I0118 02:28:24.676517 20583 solver.cpp:228] Iteration 186000, loss = 1.95928
+I0118 02:28:24.676774 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.59375
+I0118 02:28:24.676823 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.84375
+I0118 02:28:24.676843 20583 solver.cpp:244]     Train net output #2: prob = 1.75315 (* 1 = 1.75315 loss)
+I0118 02:28:24.939355 20583 sgd_solver.cpp:106] Iteration 186000, lr = 0.1
+I0118 02:40:42.116443 20583 solver.cpp:228] Iteration 187000, loss = 1.95051
+I0118 02:40:42.116704 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.5625
+I0118 02:40:42.116737 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.8125
+I0118 02:40:42.116755 20583 solver.cpp:244]     Train net output #2: prob = 1.73184 (* 1 = 1.73184 loss)
+I0118 02:40:42.392616 20583 sgd_solver.cpp:106] Iteration 187000, lr = 0.1
+I0118 02:52:59.246639 20583 solver.cpp:228] Iteration 188000, loss = 1.9597
+I0118 02:52:59.246908 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.5
+I0118 02:52:59.246950 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.78125
+I0118 02:52:59.247629 20583 solver.cpp:244]     Train net output #2: prob = 2.15936 (* 1 = 2.15936 loss)
+I0118 02:52:59.523831 20583 sgd_solver.cpp:106] Iteration 188000, lr = 0.1
+I0118 03:05:16.222267 20583 solver.cpp:228] Iteration 189000, loss = 1.96839
+I0118 03:05:16.222528 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.5
+I0118 03:05:16.222575 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.8125
+I0118 03:05:16.222595 20583 solver.cpp:244]     Train net output #2: prob = 1.85071 (* 1 = 1.85071 loss)
+I0118 03:05:16.496425 20583 sgd_solver.cpp:106] Iteration 189000, lr = 0.1
+I0118 03:17:33.932657 20583 solver.cpp:228] Iteration 190000, loss = 1.97164
+I0118 03:17:33.932888 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.375
+I0118 03:17:33.932900 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.8125
+I0118 03:17:33.932911 20583 solver.cpp:244]     Train net output #2: prob = 1.98199 (* 1 = 1.98199 loss)
+I0118 03:17:34.206205 20583 sgd_solver.cpp:106] Iteration 190000, lr = 0.1
+I0118 03:29:50.975759 20583 solver.cpp:228] Iteration 191000, loss = 1.97613
+I0118 03:29:50.976109 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.59375
+I0118 03:29:50.976147 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.71875
+I0118 03:29:50.976173 20583 solver.cpp:244]     Train net output #2: prob = 2.38462 (* 1 = 2.38462 loss)
+I0118 03:29:51.250939 20583 sgd_solver.cpp:106] Iteration 191000, lr = 0.1
+I0118 03:42:07.878752 20583 solver.cpp:228] Iteration 192000, loss = 1.9654
+I0118 03:42:07.878998 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.5
+I0118 03:42:07.879024 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.71875
+I0118 03:42:07.879040 20583 solver.cpp:244]     Train net output #2: prob = 2.01912 (* 1 = 2.01912 loss)
+I0118 03:42:08.153338 20583 sgd_solver.cpp:106] Iteration 192000, lr = 0.1
+I0118 03:54:24.229447 20583 solver.cpp:228] Iteration 193000, loss = 1.97753
+I0118 03:54:24.229684 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.46875
+I0118 03:54:24.229730 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.625
+I0118 03:54:24.230412 20583 solver.cpp:244]     Train net output #2: prob = 2.41073 (* 1 = 2.41073 loss)
+I0118 03:54:24.500265 20583 sgd_solver.cpp:106] Iteration 193000, lr = 0.1
+I0118 04:06:41.071693 20583 solver.cpp:228] Iteration 194000, loss = 1.9818
+I0118 04:06:41.071933 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.65625
+I0118 04:06:41.071964 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.84375
+I0118 04:06:41.073196 20583 solver.cpp:244]     Train net output #2: prob = 1.68638 (* 1 = 1.68638 loss)
+I0118 04:06:41.347049 20583 sgd_solver.cpp:106] Iteration 194000, lr = 0.1
+I0118 04:18:57.942292 20583 solver.cpp:228] Iteration 195000, loss = 1.99074
+I0118 04:18:57.942502 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.6875
+I0118 04:18:57.942518 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.84375
+I0118 04:18:57.942533 20583 solver.cpp:244]     Train net output #2: prob = 1.55163 (* 1 = 1.55163 loss)
+I0118 04:18:58.216208 20583 sgd_solver.cpp:106] Iteration 195000, lr = 0.1
+I0118 04:31:15.089526 20583 solver.cpp:228] Iteration 196000, loss = 1.97235
+I0118 04:31:15.089771 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.46875
+I0118 04:31:15.089809 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.78125
+I0118 04:31:15.089830 20583 solver.cpp:244]     Train net output #2: prob = 1.9095 (* 1 = 1.9095 loss)
+I0118 04:31:15.363448 20583 sgd_solver.cpp:106] Iteration 196000, lr = 0.1
+I0118 04:43:33.170991 20583 solver.cpp:228] Iteration 197000, loss = 1.95344
+I0118 04:43:33.171222 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.59375
+I0118 04:43:33.171263 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.84375
+I0118 04:43:33.171933 20583 solver.cpp:244]     Train net output #2: prob = 1.4849 (* 1 = 1.4849 loss)
+I0118 04:43:33.447003 20583 sgd_solver.cpp:106] Iteration 197000, lr = 0.1
+I0118 04:55:50.095137 20583 solver.cpp:228] Iteration 198000, loss = 1.95975
+I0118 04:55:50.095403 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.6875
+I0118 04:55:50.095444 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.84375
+I0118 04:55:50.095466 20583 solver.cpp:244]     Train net output #2: prob = 1.41546 (* 1 = 1.41546 loss)
+I0118 04:55:50.369794 20583 sgd_solver.cpp:106] Iteration 198000, lr = 0.1
+I0118 05:08:08.481261 20583 solver.cpp:228] Iteration 199000, loss = 1.96657
+I0118 05:08:08.481622 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.40625
+I0118 05:08:08.481662 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.75
+I0118 05:08:08.481683 20583 solver.cpp:244]     Train net output #2: prob = 2.28048 (* 1 = 2.28048 loss)
+I0118 05:08:08.746692 20583 sgd_solver.cpp:106] Iteration 199000, lr = 0.1
+I0118 05:20:24.225376 20583 solver.cpp:454] Snapshotting to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_50/snapshot/resnet_50_iter_200000.caffemodel
+I0118 05:20:25.313714 20583 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_50/snapshot/resnet_50_iter_200000.solverstate
+I0118 05:20:26.106899 20583 solver.cpp:228] Iteration 200000, loss = 1.95959
+I0118 05:20:26.106994 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.375
+I0118 05:20:26.107004 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.6875
+I0118 05:20:26.107017 20583 solver.cpp:244]     Train net output #2: prob = 2.41853 (* 1 = 2.41853 loss)
+I0118 05:20:26.348704 20583 sgd_solver.cpp:106] Iteration 200000, lr = 0.01
+I0118 05:32:42.704936 20583 solver.cpp:228] Iteration 201000, loss = 1.55955
+I0118 05:32:42.705178 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.53125
+I0118 05:32:42.705219 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.8125
+I0118 05:32:42.705241 20583 solver.cpp:244]     Train net output #2: prob = 1.76185 (* 1 = 1.76185 loss)
+I0118 05:32:42.979456 20583 sgd_solver.cpp:106] Iteration 201000, lr = 0.01
+I0118 05:44:59.445396 20583 solver.cpp:228] Iteration 202000, loss = 1.39073
+I0118 05:44:59.445659 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.65625
+I0118 05:44:59.445701 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.84375
+I0118 05:44:59.445732 20583 solver.cpp:244]     Train net output #2: prob = 1.44231 (* 1 = 1.44231 loss)
+I0118 05:44:59.718886 20583 sgd_solver.cpp:106] Iteration 202000, lr = 0.01
+I0118 05:57:16.312059 20583 solver.cpp:228] Iteration 203000, loss = 1.34071
+I0118 05:57:16.312322 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.625
+I0118 05:57:16.312362 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.875
+I0118 05:57:16.312382 20583 solver.cpp:244]     Train net output #2: prob = 1.49603 (* 1 = 1.49603 loss)
+I0118 05:57:16.588699 20583 sgd_solver.cpp:106] Iteration 203000, lr = 0.01
+I0118 06:09:34.009881 20583 solver.cpp:228] Iteration 204000, loss = 1.31441
+I0118 06:09:34.010149 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.65625
+I0118 06:09:34.010174 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.84375
+I0118 06:09:34.010186 20583 solver.cpp:244]     Train net output #2: prob = 1.35182 (* 1 = 1.35182 loss)
+I0118 06:09:34.272353 20583 sgd_solver.cpp:106] Iteration 204000, lr = 0.01
+I0118 06:21:52.081032 20583 solver.cpp:228] Iteration 205000, loss = 1.27242
+I0118 06:21:52.081313 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.71875
+I0118 06:21:52.081356 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.875
+I0118 06:21:52.081377 20583 solver.cpp:244]     Train net output #2: prob = 1.46359 (* 1 = 1.46359 loss)
+I0118 06:21:52.351580 20583 sgd_solver.cpp:106] Iteration 205000, lr = 0.01
+I0118 06:34:10.114480 20583 solver.cpp:228] Iteration 206000, loss = 1.24733
+I0118 06:34:10.114737 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.8125
+I0118 06:34:10.114784 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.9375
+I0118 06:34:10.114804 20583 solver.cpp:244]     Train net output #2: prob = 0.853836 (* 1 = 0.853836 loss)
+I0118 06:34:10.379968 20583 sgd_solver.cpp:106] Iteration 206000, lr = 0.01
+I0118 06:46:27.951666 20583 solver.cpp:228] Iteration 207000, loss = 1.19746
+I0118 06:46:27.951948 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.8125
+I0118 06:46:27.951974 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.96875
+I0118 06:46:27.951987 20583 solver.cpp:244]     Train net output #2: prob = 0.706306 (* 1 = 0.706306 loss)
+I0118 06:46:28.222322 20583 sgd_solver.cpp:106] Iteration 207000, lr = 0.01
+I0118 06:58:46.340975 20583 solver.cpp:228] Iteration 208000, loss = 1.16678
+I0118 06:58:46.341246 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.625
+I0118 06:58:46.341284 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.875
+I0118 06:58:46.341311 20583 solver.cpp:244]     Train net output #2: prob = 1.55744 (* 1 = 1.55744 loss)
+I0118 06:58:46.614085 20583 sgd_solver.cpp:106] Iteration 208000, lr = 0.01
+I0118 07:11:03.001787 20583 solver.cpp:228] Iteration 209000, loss = 1.11336
+I0118 07:11:03.002020 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.65625
+I0118 07:11:03.002063 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.90625
+I0118 07:11:03.002091 20583 solver.cpp:244]     Train net output #2: prob = 1.39436 (* 1 = 1.39436 loss)
+I0118 07:11:03.273030 20583 sgd_solver.cpp:106] Iteration 209000, lr = 0.01
+I0118 07:23:20.645387 20583 solver.cpp:228] Iteration 210000, loss = 1.02639
+I0118 07:23:20.645624 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.84375
+I0118 07:23:20.645663 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.9375
+I0118 07:23:20.645689 20583 solver.cpp:244]     Train net output #2: prob = 0.908226 (* 1 = 0.908226 loss)
+I0118 07:23:20.906345 20583 sgd_solver.cpp:106] Iteration 210000, lr = 0.01
+I0118 07:35:38.359889 20583 solver.cpp:228] Iteration 211000, loss = 1.19527
+I0118 07:35:38.360141 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.6875
+I0118 07:35:38.360185 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.875
+I0118 07:35:38.360213 20583 solver.cpp:244]     Train net output #2: prob = 1.14181 (* 1 = 1.14181 loss)
+I0118 07:35:38.633985 20583 sgd_solver.cpp:106] Iteration 211000, lr = 0.01
+I0118 07:47:55.792322 20583 solver.cpp:228] Iteration 212000, loss = 1.17092
+I0118 07:47:55.792574 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.6875
+I0118 07:47:55.792600 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.90625
+I0118 07:47:55.792619 20583 solver.cpp:244]     Train net output #2: prob = 1.17855 (* 1 = 1.17855 loss)
+I0118 07:47:56.064723 20583 sgd_solver.cpp:106] Iteration 212000, lr = 0.01
+I0118 08:00:13.964172 20583 solver.cpp:228] Iteration 213000, loss = 1.16773
+I0118 08:00:13.964462 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.71875
+I0118 08:00:13.964496 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.875
+I0118 08:00:13.964511 20583 solver.cpp:244]     Train net output #2: prob = 1.45267 (* 1 = 1.45267 loss)
+I0118 08:00:14.236845 20583 sgd_solver.cpp:106] Iteration 213000, lr = 0.01
+I0118 08:12:31.718330 20583 solver.cpp:228] Iteration 214000, loss = 1.14263
+I0118 08:12:31.718572 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.59375
+I0118 08:12:31.718592 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.84375
+I0118 08:12:31.718611 20583 solver.cpp:244]     Train net output #2: prob = 1.3685 (* 1 = 1.3685 loss)
+I0118 08:12:31.993818 20583 sgd_solver.cpp:106] Iteration 214000, lr = 0.01
+I0118 08:24:49.152839 20583 solver.cpp:228] Iteration 215000, loss = 1.13602
+I0118 08:24:49.153100 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.65625
+I0118 08:24:49.153146 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.84375
+I0118 08:24:49.153167 20583 solver.cpp:244]     Train net output #2: prob = 1.2429 (* 1 = 1.2429 loss)
+I0118 08:24:49.426175 20583 sgd_solver.cpp:106] Iteration 215000, lr = 0.01
+I0118 08:37:07.085657 20583 solver.cpp:228] Iteration 216000, loss = 1.13472
+I0118 08:37:07.085916 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.6875
+I0118 08:37:07.085958 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.96875
+I0118 08:37:07.085979 20583 solver.cpp:244]     Train net output #2: prob = 1.1027 (* 1 = 1.1027 loss)
+I0118 08:37:07.357980 20583 sgd_solver.cpp:106] Iteration 216000, lr = 0.01
+I0118 08:49:24.098444 20583 solver.cpp:228] Iteration 217000, loss = 1.09268
+I0118 08:49:24.098681 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.6875
+I0118 08:49:24.098729 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.875
+I0118 08:49:24.098743 20583 solver.cpp:244]     Train net output #2: prob = 1.31761 (* 1 = 1.31761 loss)
+I0118 08:49:24.370290 20583 sgd_solver.cpp:106] Iteration 217000, lr = 0.01
+I0118 09:01:40.173853 20583 solver.cpp:228] Iteration 218000, loss = 1.07806
+I0118 09:01:40.174108 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.6875
+I0118 09:01:40.174151 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.90625
+I0118 09:01:40.174867 20583 solver.cpp:244]     Train net output #2: prob = 1.03905 (* 1 = 1.03905 loss)
+I0118 09:01:40.433861 20583 sgd_solver.cpp:106] Iteration 218000, lr = 0.01
+I0118 09:13:56.346873 20583 solver.cpp:228] Iteration 219000, loss = 1.0401
+I0118 09:13:56.347146 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.78125
+I0118 09:13:56.347185 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.9375
+I0118 09:13:56.347908 20583 solver.cpp:244]     Train net output #2: prob = 0.663571 (* 1 = 0.663571 loss)
+I0118 09:13:56.620633 20583 sgd_solver.cpp:106] Iteration 219000, lr = 0.01
+I0118 09:26:13.821238 20583 solver.cpp:228] Iteration 220000, loss = 0.991454
+I0118 09:26:13.821476 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.75
+I0118 09:26:13.821502 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.96875
+I0118 09:26:13.821521 20583 solver.cpp:244]     Train net output #2: prob = 0.837798 (* 1 = 0.837798 loss)
+I0118 09:26:14.103183 20583 sgd_solver.cpp:106] Iteration 220000, lr = 0.01
+I0118 09:38:30.600739 20583 solver.cpp:228] Iteration 221000, loss = 1.11351
+I0118 09:38:30.600978 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.75
+I0118 09:38:30.600997 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.96875
+I0118 09:38:30.601014 20583 solver.cpp:244]     Train net output #2: prob = 0.806213 (* 1 = 0.806213 loss)
+I0118 09:38:30.860931 20583 sgd_solver.cpp:106] Iteration 221000, lr = 0.01
+I0118 09:50:48.096683 20583 solver.cpp:228] Iteration 222000, loss = 1.10917
+I0118 09:50:48.096936 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.65625
+I0118 09:50:48.096978 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.875
+I0118 09:50:48.097009 20583 solver.cpp:244]     Train net output #2: prob = 1.26077 (* 1 = 1.26077 loss)
+I0118 09:50:48.369323 20583 sgd_solver.cpp:106] Iteration 222000, lr = 0.01
+I0118 10:01:50.224658 20604 blocking_queue.cpp:50] Data layer prefetch queue empty
+I0118 10:02:39.787796 20590 blocking_queue.cpp:50] Waiting for data
+I0118 10:03:06.950242 20590 blocking_queue.cpp:50] Waiting for data
+I0118 10:03:48.284447 20603 blocking_queue.cpp:50] Waiting for data
+I0118 10:03:58.437835 20583 solver.cpp:228] Iteration 223000, loss = 1.09241
+I0118 10:03:58.437901 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.875
+I0118 10:03:58.437912 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.96875
+I0118 10:03:58.437930 20583 solver.cpp:244]     Train net output #2: prob = 0.599253 (* 1 = 0.599253 loss)
+I0118 10:03:58.707976 20583 sgd_solver.cpp:106] Iteration 223000, lr = 0.01
+I0118 10:16:15.682968 20583 solver.cpp:228] Iteration 224000, loss = 1.08559
+I0118 10:16:15.683207 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.78125
+I0118 10:16:15.683229 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.96875
+I0118 10:16:15.683245 20583 solver.cpp:244]     Train net output #2: prob = 0.604114 (* 1 = 0.604114 loss)
+I0118 10:16:15.956791 20583 sgd_solver.cpp:106] Iteration 224000, lr = 0.01
+I0118 10:28:33.470218 20583 solver.cpp:228] Iteration 225000, loss = 1.08633
+I0118 10:28:33.470494 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.71875
+I0118 10:28:33.470541 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.875
+I0118 10:28:33.470563 20583 solver.cpp:244]     Train net output #2: prob = 1.31773 (* 1 = 1.31773 loss)
+I0118 10:28:33.742461 20583 sgd_solver.cpp:106] Iteration 225000, lr = 0.01
+I0118 10:40:51.626734 20583 solver.cpp:228] Iteration 226000, loss = 1.05538
+I0118 10:40:51.627104 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.8125
+I0118 10:40:51.627148 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.9375
+I0118 10:40:51.627178 20583 solver.cpp:244]     Train net output #2: prob = 0.908557 (* 1 = 0.908557 loss)
+I0118 10:40:51.896693 20583 sgd_solver.cpp:106] Iteration 226000, lr = 0.01
+I0118 10:53:07.967886 20583 solver.cpp:228] Iteration 227000, loss = 1.03703
+I0118 10:53:07.968138 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.75
+I0118 10:53:07.968183 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.90625
+I0118 10:53:07.968214 20583 solver.cpp:244]     Train net output #2: prob = 0.973158 (* 1 = 0.973158 loss)
+I0118 10:53:08.241458 20583 sgd_solver.cpp:106] Iteration 227000, lr = 0.01
+I0118 11:05:25.359601 20583 solver.cpp:228] Iteration 228000, loss = 1.0272
+I0118 11:05:25.359832 20583 solver.cpp:244]     Train net output #0: accuracy@1 = 0.8125
+I0118 11:05:25.359843 20583 solver.cpp:244]     Train net output #1: accuracy@5 = 0.875
+I0118 11:05:25.359853 20583 solver.cpp:244]     Train net output #2: prob = 1.11145 (* 1 = 1.11145 loss)
+I0118 11:05:25.635100 20583 sgd_solver.cpp:106] Iteration 228000, lr = 0.01

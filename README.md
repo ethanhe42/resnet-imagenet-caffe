@@ -1,4 +1,4 @@
-# train resnet imagenet with caffe
+# train ResNet on ImageNet with Caffe
 All models are trained on 4 GPUs with a minibatch size of 128. Testing is turned off during training due to memory limit(at least 12GB is require).
 The LMDB data is obtained from the [official caffe imagenet tutorial](http://caffe.berkeleyvision.org/gathered/examples/imagenet.html)
 

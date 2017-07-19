@@ -11,10 +11,13 @@ mkdir resnet_50/snapshot
 ./train.sh 0,1,2,3 resnet_50 resnet_50_
 ```
 
+**For better training results, please install [my Caffe fork](https://github.com/yihui-he/caffe-pro), since the official Caffe ImageData layer doesn't support original paper's augmentation (resize shorter side to 256 then crop to 224).**   
+**See `resnet_50/ResNet-50-test.prototxt` ImageData layer for details**
+
 ### resnet-18
 coming soon
 ### resnet-50
-coming soon
+use `resnet_50/ResNet-50-test.prototxt` for training and validation
 ### resnet-101
 coming soon
 ### resnet-32

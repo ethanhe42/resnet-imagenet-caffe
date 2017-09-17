@@ -28,6 +28,6 @@ training loss for resnet-32 is shown below:
 the trained model is provided in [release](https://github.com/yihui-he/resnet-imagenet-caffe/releases/download/v1.0/resnet_32_iter_750000.caffemodel)
 ![a](resnet_32/loss.png)
 
-### ResNet for CIFAR-10 on CAFFE
-[https://github.com/yihui-he/resnet-cifar10-caffe](https://github.com/yihui-he/resnet-cifar10-caffe)
-
+### Other models on Caffe
+[Xception-Caffe](https://github.com/yihui-he/Xception-caffe)  
+[ResNet-Cifar10-Caffe](https://github.com/yihui-he/resnet-cifar10-caffe)

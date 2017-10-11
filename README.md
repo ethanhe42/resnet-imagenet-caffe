@@ -14,12 +14,9 @@ mkdir resnet_50/snapshot
 **For better training results, please install [my Caffe fork](https://github.com/yihui-he/caffe-pro), since the official Caffe ImageData layer doesn't support original paper's augmentation (resize shorter side to 256 then crop to 224x224). Use my 224x224 mean image `bgr.binaryproto` accordingly**   
 **See `resnet_50/ResNet-50-test.prototxt` ImageData layer for details**
 
-### resnet-18
-coming soon
 ### resnet-50
-use `resnet_50/ResNet-50-test.prototxt` for training and validation
-### resnet-101
-coming soon
+use `resnet_50/ResNet-50-test.prototxt` for training and validation  
+(new) We've release a [2X accelerated ResNet-50](https://github.com/yihui-he/channel-pruning/releases/tag/ResNet-50-2X) caffemodel using [channel-pruning](https://github.com/yihui-he/channel-pruning)
 ### resnet-32
 This is a bottleneck architecture,  
 Since there's no strong data augmentation and 10-crop test in caffe, the results maybe a bit low.  
@@ -27,6 +24,7 @@ test accuracy: accuracy@1 = 0.67892, accuracy@5 = 0.88164
 training loss for resnet-32 is shown below:  
 the trained model is provided in [release](https://github.com/yihui-he/resnet-imagenet-caffe/releases/download/v1.0/resnet_32_iter_750000.caffemodel)
 ![a](resnet_32/loss.png)
+
 
 ### Other models on Caffe
 [Xception-Caffe](https://github.com/yihui-he/Xception-caffe)  

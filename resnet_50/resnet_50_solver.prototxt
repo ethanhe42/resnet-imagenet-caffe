@@ -1,4 +1,4 @@
-net: "resnet_50/resnet_50.prototxt"
+net: "resnet_50/ResNet-50-test.prototxt"
 #test_iter: 6000
 #test_interval: 50000
 #test_initialization: true

@@ -34,7 +34,7 @@ Since there's no strong data augmentation and 10-crop test in caffe, the results
 test accuracy: accuracy@1 = 0.67892, accuracy@5 = 0.88164  
 training loss for resnet-32 is shown below:  
 the trained model is provided in [release](https://github.com/yihui-he/resnet-imagenet-caffe/releases/download/v1.0/resnet_32_iter_750000.caffemodel)
-![a](resnet_32/loss.png)
+![a](https://raw.githubusercontent.com/yihui-he/resnet-imagenet-caffe/master/resnet_32/loss.png)
 
 ### Other models on Caffe
 [Xception-Caffe](https://github.com/yihui-he/Xception-caffe)  
